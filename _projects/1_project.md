@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Evaluating ChatGPT for E2R text adaptation
+description: Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities
 img: assets/img/chatgpt.png
 importance: 1
 category: work
-related_publications: true
 ---
 
 ## 🧭 Overview
@@ -72,11 +72,9 @@ Included stakeholders representing users with cognitive disabilities.
 
 ## Reflections 
 
-- Learned the importance of **empathetic facilitation** when conducting studies with participants with cognitive disabilities — pacing, clarity, and environment matter deeply.  
 - Confirmed that **mixed-methods evaluation** (quantitative + qualitative) yields richer insight than any single metric.  
-- Next iteration: prototype an **interactive adaptation interface** (text + speech) to evaluate real-world task usability, not just static comprehension.  
 - Gained confidence applying accessibility ethics and recruitment practices transferable to UX research teams.
-
+- Learned the importance of **empathetic facilitation** when conducting studies with participants with cognitive disabilities, as pacing, clarity, and environment matter deeply. 
 ---
 
 ## Outcome Statement
