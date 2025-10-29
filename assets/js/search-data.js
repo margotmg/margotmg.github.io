@@ -453,7 +453,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-evaluating-chatgpt-for-e2r-text-adaptation",
           title: 'Evaluating ChatGPT for E2R text adaptation',
-          description: "with background image",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
