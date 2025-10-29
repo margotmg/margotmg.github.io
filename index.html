@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] • UX Research Portfolio</title>
+  <meta name="description" content="UX Research portfolio focusing on accessibility, computational linguistics, and inclusive design." />
+  <style>
+    :root{--bg:#0f172a;--panel:#111827;--muted:#94a3b8;--text:#e5e7eb;--accent:#38bdf8;--accent-2:#a78bfa;--card:#0b1220;--ring:#334155}
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:linear-gradient(180deg,#0b1220, #0f172a 40%, #0b1220);color:var(--text);line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    a:focus{outline:2px solid var(--accent);outline-offset:2px}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1120px;margin-inline:auto;padding:24px}
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:16px;top:16px;width:auto;height:auto;padding:8px 12px;background:#fff;color:#000;border-radius:8px}
+    header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(8px);background:rgba(15,23,42,.75);border-bottom:1px solid #1f2937;z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand__logo{inline-size:40px;block-size:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 0 0 3px rgba(56,189,248,.2)}
+    .brand__name{font-weight:700;letter-spacing:.3px}
+    .nav__links{display:flex;gap:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:rgba(255,255,255,.03)}
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .btn--primary{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1220;font-weight:700}
+    .hero{padding-block:56px;border-bottom:1px solid #1f2937}
+    .hero__kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}
+    .hero__title{font-size:clamp(28px,6vw,46px);line-height:1.1;margin:.35em 0}
+    .hero__subtitle{color:#cbd5e1;max-width:60ch}
+    .grid{display:grid;gap:20px}
+    .grid--cards{grid-template-columns:repeat(1,minmax(0,1fr))}
+    @media (min-width:720px){.grid--cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (min-width:1040px){.grid--cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .card{background:linear-gradient(180deg,#0e1526,#0a1020);border:1px solid #1f2937;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-height:260px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card__media{aspect-ratio:16/9;background:#0b1220;border-bottom:1px solid #162033;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:.9rem}
+    .card__body{padding:16px}
+    .card__eyebrow{color:var(--muted);font-size:.8rem}
+    .card__title{font-weight:700;margin:.25em 0}
+    .card__meta{color:#9ca3af;font-size:.9rem}
+    .section{padding-block:48px;border-bottom:1px solid #1f2937}
+    .about{display:grid;grid-template-columns:1fr;gap:24px}
+    @media (min-width:900px){.about{grid-template-columns:1.2fr .8fr}}
+    .about__panel{background:linear-gradient(180deg,#0e1526,#0c1428);border:1px solid #1f2937;border-radius:16px;padding:20px}
+    ul.inline{display:flex;gap:10px;flex-wrap:wrap;padding-left:0;list-style:none}
+    .pill{border:1px solid #1f2937;border-radius:999px;padding:6px 10px;background:rgba(255,255,255,.03);font-size:.9rem}
+    footer{padding:38px 0;color:#94a3b8}
+    .muted{color:#94a3b8}
+    /* ---- Case Study Page Styles ---- */
+    .cs-hero{padding-block:48px}
+    .prose h1{font-size:clamp(28px,6vw,40px);line-height:1.1;margin:0 0 .25em}
+    .prose h2{margin-top:1.75em;font-size:1.35rem}
+    .prose p{color:#d1d5db}
+    .prose li{margin:.35em 0}
+    .gallery{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .figure{border:1px dashed #334155;border-radius:14px;padding:14px;background:rgba(255,255,255,.02)}
+    .caption{font-size:.9rem;color:#94a3b8;margin-top:6px}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to main content</a>
+  
+  <!-- Global Header / Nav -->
+  <header role="banner" aria-label="Global">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true"></div>
+        <div class="brand__name">[Your Name] • UX Research</div>
+      </div>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#home" class="btn" aria-current="page">Home</a>
+        <a href="#about" class="btn">About</a>
+        <a href="#contact" class="btn">Contact</a>
+        <a href="#case-study-template" class="btn btn--primary">Case Study Template</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================= -->
+  <!-- HOME (Landing)                -->
+  <!-- ============================= -->
+  <main id="content" tabindex="-1">
+    <section id="home" class="hero container" role="region" aria-label="Hero">
+      <p class="hero__kicker">Accessibility • Computational Linguistics • Inclusive UX</p>
+      <h1 class="hero__title">I research how language technologies can be usable and accessible for everyone.</h1>
+      <p class="hero__subtitle">PhD researcher turned UX Researcher. I run qualitative & mixed-methods studies at the intersection of AI, language, and accessibility — translating findings into actionable product decisions.</p>
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn--primary" href="#work">View Case Studies</a>
+        <a class="btn" href="#about">About Me</a>
+      </div>
+    </section>
+
+    <section id="work" class="section container" role="region" aria-label="Featured case studies">
+      <h2 style="margin-top:0">Featured Case Studies</h2>
+      <div class="grid grid--cards" style="margin-top:16px">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card__media" aria-label="Placeholder image">16:9 cover image</div>
+          <div class="card__body">
+            <div class="card__eyebrow">Accessibility • LLMs</div>
+            <h3 class="card__title"><a href="#case-study-accessible-language">Making Language Tech Truly Accessible</a></h3>
+            <p class="card__meta">Evaluating ChatGPT for Spanish Easy‑to‑Read adaptation and its UX implications.</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card__media" aria-label="Placeholder image">16:9 cover image</div>
+          <div class="card__body">
+            <div class="card__eyebrow">[Theme]</div>
+            <h3 class="card__title"><a href="#case-study-2">[Case Study 2 Title]</a></h3>
+            <p class="card__meta">One‑line teaser describing outcome/impact.</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card__media" aria-label="Placeholder image">16:9 cover image</div>
+          <div class="card__body">
+            <div class="card__eyebrow">[Theme]</div>
+            <h3 class="card__title"><a href="#case-study-3">[Case Study 3 Title]</a></h3>
+            <p class="card__meta">One‑line teaser describing outcome/impact.</p>
+          </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card__media" aria-label="Placeholder image">16:9 cover image</div>
+          <div class="card__body">
+            <div class="card__eyebrow">[Theme]</div>
+            <h3 class="card__title"><a href="#case-study-4">[Case Study 4 Title]</a></h3>
+            <p class="card__meta">One‑line teaser describing outcome/impact.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section container about" role="region" aria-label="About me">
+      <div class="about__panel">
+        <h2>About Me</h2>
+        <p>I’m an interdisciplinary UX researcher focused on accessibility, computational linguistics, and inclusive design. My work blends qualitative interviews, thematic analysis, and data‑driven methods to understand how people engage with language and assistive technologies.</p>
+        <h3>Core Skills</h3>
+        <ul class="inline">
+          <li class="pill">Qual & Mixed‑Methods</li>
+          <li class="pill">Accessibility (WCAG)</li>
+          <li class="pill">Prompt/Conversation Research</li>
+          <li class="pill">Research Ops</li>
+          <li class="pill">Synthesis & Storytelling</li>
+        </ul>
+        <h3>Research Philosophy</h3>
+        <blockquote class="muted">Accessibility isn’t an afterthought — it’s the foundation of good design.</blockquote>
+      </div>
+      <aside class="about__panel">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#" aria-label="Open LinkedIn profile">LinkedIn</a></li>
+          <li><a href="#" aria-label="Send me an email">Email</a></li>
+          <li><a href="#" aria-label="Open Google Scholar">Google Scholar</a></li>
+          <li><a href="#" aria-label="Download resume PDF">Download Resume</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="contact" class="section container" role="region" aria-label="Contact">
+      <h2>Get in Touch</h2>
+      <p>Interested in accessible design or inclusive UX research? I’d love to connect.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn--primary" href="mailto:your.email@example.com">Email Me</a>
+        <a class="btn" href="#">Book a chat</a>
+      </div>
+    </section>
+
+    <footer class="container" role="contentinfo">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <small>© <span id="year">2025</span> [Your Name]. All rights reserved.</small>
+        <small class="muted">Built with accessibility in mind.</small>
+      </div>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- CASE STUDY TEMPLATE (Single-page section version)          -->
+    <!-- You can duplicate this markup into its own HTML file later -->
+    <!-- ========================================================= -->
+    <section id="case-study-template" class="section container prose" role="region" aria-label="Case study: Making Language Tech Truly Accessible">
+      <div class="cs-hero">
+        <h1>Case Study • Making Language Tech Truly Accessible</h1>
+        <p class="muted">Evaluating how conversational AI supports “Easy‑to‑Read” Spanish texts for users with cognitive disabilities</p>
+      </div>
+
+      <h2>Overview</h2>
+      <p><strong>Context.</strong> As part of my PhD in Computational Linguistics, I explored how large language models (LLMs) like ChatGPT can support adaptation of standard Spanish texts into the <em>Lectura Fácil</em> (Easy‑to‑Read) variant — a simplified format designed for people with cognitive disabilities, low literacy, or language barriers. Manually producing these texts is time‑intensive and costly; this study examined whether AI could help while preserving accessibility.</p>
+      <ul>
+        <li><strong>My role:</strong> Lead researcher — methodology design, prompt experiments, quantitative & qualitative evaluations, synthesis of design implications.</li>
+        <li><strong>Timeline:</strong> 6–8 months</li>
+        <li><strong>Collaboration:</strong> Hochschule Darmstadt • HiTZ Center (Basque Country)</li>
+      </ul>
+
+      <h2>Research Question</h2>
+      <blockquote>How well can ChatGPT adapt Spanish news texts into Easy‑to‑Read, and what are the usability and accessibility implications?</blockquote>
+
+      <h2>Methods</h2>
+      <p><strong>Approach.</strong> I selected 10 Spanish news articles and ran multiple adaptation experiments with different prompt styles. Evaluation combined automated readability metrics, a manual checklist review, and user testing with participants with cognitive disabilities.</p>
+      <ul>
+        <li><strong>Prompt experiments</strong> guided by UNE 153101:2018 EX Easy‑to‑Read guidelines.</li>
+        <li><strong>Automated readability</strong> — lexical & syntactic complexity (e.g., rare word rate, sentence length).</li>
+        <li><strong>Manual checklist</strong> — fluency, simplicity, meaning preservation, and layout/format concerns.</li>
+        <li><strong>User testing</strong> — comprehension & preference comparisons of human‑ vs AI‑adapted versions.</li>
+      </ul>
+
+      <div class="gallery" aria-label="Artifacts gallery">
+        <figure class="figure">
+          <img src="images/process-diagram.png" alt="Diagram of adaptation pipeline from original text to evaluated outputs" />
+          <figcaption class="caption">Process: Original → ChatGPT → Automated & Manual Evaluation → User Testing → Insights</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="images/prompt-comparison.png" alt="Table comparing prompt variants and sample outputs" />
+          <figcaption class="caption">Prompt variations and representative outputs</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="images/comprehension-chart.png" alt="Bar chart of comprehension scores for human vs. AI versions" />
+          <figcaption class="caption">Comprehension: human‑adapted vs ChatGPT versions</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="images/insights-affinity.png" alt="Affinity diagram summarizing qualitative insights" />
+          <figcaption class="caption">Key insights from qualitative analysis</figcaption>
+        </figure>
+      </div>
+
+      <h2>Key Findings & Insights</h2>
+      <ul>
+        <li>LLM outputs simplified vocabulary but often increased sentence length and structural complexity, which can hinder comprehension.</li>
+        <li>Participants consistently preferred human‑adapted texts for clarity and readability.</li>
+        <li>Prompt wording affected outcomes; reproducibility and consistency remain challenges for LLM‑assisted workflows.</li>
+        <li>Automated metrics missed layout/format aspects vital to accessibility (line spacing, sentence breaks, explicit examples).</li>
+      </ul>
+
+      <h2>Design Recommendations & Impact</h2>
+      <ul>
+        <li>Adopt a <strong>human‑in‑the‑loop</strong> workflow — AI for first pass, human review for accessibility compliance.</li>
+        <li>Create a <strong>readability + layout dashboard</strong> to monitor Easy‑to‑Read criteria.</li>
+        <li>Develop <strong>prompt templates</strong> and <strong>checklists</strong> to guide consistent adaptation.</li>
+        <li>Plan <strong>inclusive user testing</strong> early to validate comprehension, not just readability scores.</li>
+      </ul>
+
+      <h2>Reflections</h2>
+      <ul>
+        <li>Empathetic facilitation is essential when collaborating with participants with cognitive disabilities.</li>
+        <li>Mixed‑methods triangulation yields more actionable insights than any single metric.</li>
+        <li>Next step: prototype an interactive adaptation interface (text + speech) to evaluate real‑world tasks.</li>
+      </ul>
+
+      <p><a class="btn" href="https://aclanthology.org/2024.lrec-main.126.pdf">Read the full paper (LREC 2024)</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Small enhancement to update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
