@@ -4,7 +4,7 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "About",
+    title: "about",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -458,12 +458,12 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-accessible-spanish-texts-with-languagetool",
           title: 'Accessible Spanish Texts with LanguageTool',
-          description: "Enabling *Lectura Fácil* (Easy-to-Read Spanish) through a custom authoring assistant",
+          description: "Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom authoring assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-unlocking-speech-recognition-for-spanish-dysarthric-users",
+          title: 'Unlocking Speech Recognition for Spanish Dysarthric Users',
+          description: "A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
