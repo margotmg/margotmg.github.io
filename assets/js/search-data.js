@@ -456,9 +456,9 @@ ninja.data = [{
           description: "Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-accessible-spanish-texts-with-languagetool",
+          title: 'Accessible Spanish Texts with LanguageTool',
+          description: "Enabling *Lectura Fácil* (Easy-to-Read Spanish) through a custom authoring assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
