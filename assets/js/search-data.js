@@ -453,7 +453,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-evaluating-chatgpt-for-e2r-text-adaptation",
           title: 'Evaluating ChatGPT for E2R text adaptation',
-          description: "",
+          description: "Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
@@ -497,13 +497,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
         id: 'social-inspire',
         title: 'Inspire HEP',
         section: 'Socials',
@@ -522,14 +515,14 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=OrD27g0AAAAJ&hl", "_blank");
         },
       },{
         id: 'social-custom_social',
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("www.linkedin.com/in/margotmadinagonzalez", "_blank");
         },
       },{
       id: 'light-theme',
