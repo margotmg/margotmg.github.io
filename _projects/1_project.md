@@ -2,12 +2,12 @@
 layout: page
 title: Evaluating ChatGPT for E2R text adaptation
 description: Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities
-img: assets/img/chatgpt.png
+img: assets/img/chatgptphoto.jpg
 importance: 1
 category: work
 ---
 
-## 🧭 Overview
+## Overview
 **Context**  
 As part of my PhD in Computational Linguistics, I explored how large language models (LLMs) like ChatGPT can support the adaptation of standard Spanish texts into the *Lectura Fácil* (“Easy-to-Read”) variant; a simplified text format designed for people with cognitive disabilities, low literacy, or language barriers.  
 Manual creation of these texts is time-consuming and expensive. This project investigated whether ChatGPT could make this process automatic and scalable.
@@ -29,7 +29,17 @@ Included stakeholders representing users with cognitive disabilities.
 
 ---
 
-## 🔍 Methods
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/chatgpt.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This image can also have a caption. It's like magic.
+</div>
+
+
+## Methods
 
 **Approach**
 1. Selected 10 Spanish news texts and performed multiple ChatGPT adaptation experiments.  
@@ -75,6 +85,7 @@ Included stakeholders representing users with cognitive disabilities.
 - Confirmed that **mixed-methods evaluation** (quantitative + qualitative) yields richer insight than any single metric.  
 - Gained confidence applying accessibility ethics and recruitment practices transferable to UX research teams.
 - Learned the importance of **empathetic facilitation** when conducting studies with participants with cognitive disabilities, as pacing, clarity, and environment matter deeply. 
+
 ---
 
 ## Outcome Statement

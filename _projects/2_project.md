@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Accessible Spanish Texts with LanguageTool
-description: Enabling *Lectura Fácil* (Easy-to-Read Spanish) through a custom authoring assistant
+description: Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom authoring assistant
 img: languagetool.png
 importance: 2
 category: work
@@ -10,7 +10,7 @@ giscus_comments: true
 
 ---
 
-## 🧭 Overview  
+## Overview  
 **Context.**  
 Accessible text design for readers with cognitive or learning disabilities is essential. However, the production of *Easy-to-Read* (E2R) or E2R Spanish *Lectura Fácil* (LF) content remains labor-intensive. Manual adaptation of texts involves rewriting for simpler vocabulary, shorter sentences, layout, and clarity.  
 This study investigated how a tool built on *LanguageTool* (an open-source writing assistant) could support adaptation of Spanish texts into LF by detecting guideline violations, offering simplifications and definitions. 
@@ -31,11 +31,11 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 ---
 
-## 🔍 Methods  
+## Methods  
 **Approach.**  
 - Analyzed the UNE 153101:2018 EX LF standard for LF to identify vocabulary, syntax, layout, and style rules.  
-- Created a set of custom rules in *LanguageTool* (via XML configuration) to flag LF-compliance issues: long words, figurative language, acronyms, complex sentences, etc. 
-- Integrated external resources: [*Diccionario Fácil*](https://www.diccionariofacil.org) (easy definitions for complex or polysemous terms) and EASIER [*EASIER*](https://github.com/LURMORENO/EASIER_CORPUS) corpus synonyms for readers with cognitive impairments.  
+- Created a set of custom rules in *LanguageTool* (via XML configuration) to flag LF rule-compliance issues: long words, figurative language, acronyms, complex sentences, etc. 
+- Integrated external resources: [*Diccionario Fácil*](https://www.diccionariofacil.org) (easy definitions for complex or polysemous terms) and [*EASIER*](https://github.com/LURMORENO/EASIER_CORPUS) corpus synonyms for readers with cognitive impairments.  
 - Built an interface (*LFWriteAssist*) with three panels: input text, suggestions/definitions panel, and automatically corrected output. Rules applied colours (green = auto-changed, orange = flagged for review).  
 - Conducted an internal evaluation: rule creation, tool deployment in prototype form; documented limitations (no user-testing yet). 
 
@@ -46,7 +46,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 ---
 
-## 💡 Key Findings & Insights  
+## Key Findings & Insights  
 - The prototype shows that a writing‐assistant can substantially support the first pass of LF adaptation by flagging vocabulary, acronyms, and long phrases. 
 - Some rules are straightforward to encode (e.g., avoid figurative speech, expand abbreviations), but others (e.g., avoid unnecessary words, layout/style guidance) are difficult to formalize in rule-based systems. 
 - The tool covers Spanish vocabulary and syntax, but does **not** yet address visual design/layout or user-interaction aspects of LF texts. This is an important gap for full accessibility. 
@@ -64,17 +64,17 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 
 **Impact.**  
-- Demonstrates capability to bring linguistics, accessibility guidelines, and UX tooling together.  
-- Useful example for product teams building assistive writing tools, text simplification workflows, or inclusive content pipelines.  
-- In a UX research portfolio, this project shows methodical thinking, tooling implementation, inclusive-design awareness, and readiness to work across disciplines.
+- Highlighted the value of collaboration between accessibility experts, linguists, and engineers to make inclusive writing scalable.
+- Showed that accessibility principles from linguistic research can be operationalized into automated authoring support. 
+- Offered a reproducible methodology for developing assistive writing. 
 
 ---
 
 ## Reflections   
 - **Working with guidelines**: Translating textual guidelines into actionable rules is challenging — you learn to balance precision vs ambiguity.  
-- **Tooling vs users**: Building for accessibility means thinking beyond vocabulary: layout, comprehension, interaction all matter — and tool alone is not enough.  
-- **Iterative mindset**: The tool is a prototype — next phases involve user feedback and real-world integration. I gained experience designing for underserved users and bridging technical implementation with user-centric goals.  
-- If repeated: I would embed an end‐user study early (readers with cognitive disabilities) to measure comprehension gain and incorporate accessibility metrics (time to read, error rate) rather than only rule-compliance.
+- **Tooling vs users**: Building for accessibility means thinking beyond vocabulary. Layout, information density... all matter, and tool alone is not enough.  
+- **Iterative mindset**: The tool is a prototype, and next phases involve user feedback and real-world integration. I gained experience designing for specific users in mind and bridging technical implementation with user-centric goals.  
+- If repeated: I would embed an end‐user study early (LF translators in this case) to measure comprehension gain and incorporate accessibility metrics (time to read, error rate) rather than only rule-compliance.
 
 ---
 
@@ -97,12 +97,6 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 
 [📄 Read the full paper here: Madina, M., Gonzalez-Dios, I., & Siegel, M. (2024, May). LanguageTool as a CAT tool for Easy-to-Read in Spanish. In Proceedings of the 3rd Workshop on Tools and Resources for People with REAding DIfficulties (READI)@ LREC-COLING 2024 (pp. 93-101).](https://aclanthology.org/2024.readi-1.8.pdf)
-
----
-
-
-
----
 
 
 
