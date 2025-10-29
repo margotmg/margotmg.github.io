@@ -49,7 +49,7 @@ I am currently open to opportunities in:
 - Event Organization & Coordination
 
 What I bring
-•⁠ ⁠Plain-language/Easy-to-Read + accessibility expertise (readability, WCAG mindset)
-•⁠ ⁠Mixed-methods research (interviews, surveys, usability tests, A/B, stats)
-•⁠ ⁠LLM evaluation & prompt-experiment design 
-•⁠ ⁠Event coordination and wedding planning experience
+- ⁠Plain-language/Easy-to-Read + accessibility expertise (readability, WCAG mindset)
+- ⁠Mixed-methods research (interviews, surveys, usability tests, A/B, stats)
+- ⁠LLM evaluation & prompt-experiment design 
+- ⁠Event coordination and wedding planning experience

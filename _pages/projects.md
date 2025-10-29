@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Case Studies
+title: case studies
 permalink: /projects/
 #description: A growing collection of your cool projects.
 nav: true
