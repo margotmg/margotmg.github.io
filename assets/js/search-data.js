@@ -419,8 +419,8 @@ ninja.data = [{
           description: "Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom authoring assistant",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-unlocking-speech-recognition-for-spanish-dysarthric-users",
-          title: 'Unlocking Speech Recognition for Spanish Dysarthric Users',
+            },},{id: "projects-unlocking-speech-recognition-for-spanish-dysarthric-speech",
+          title: 'Unlocking Speech Recognition for Spanish Dysarthric Speech',
           description: "A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
