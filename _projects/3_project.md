@@ -13,20 +13,23 @@ category: work
 ---
 
 ## Overview  
-**Context.**  
+**Context**  
 Automatic Speech Recognition (ASR) systems have shown promise for users with speech impairments, offering potential accessibility benefits. However, dysarthric speech (resulting from neurological or physical conditions) poses significant recognition challenges. This pilot experiment examines how well the Microsoft Azure ASR system performs on Spanish dysarthric speech. 
-**My Role.**  
+
+**My Role**  
 Lead researcher: designing the pilot study, recruiting participants with dysarthric speech, running ASR evaluations, analyzing error types and performance metrics, and deriving design implications for assistive voice systems.  
-**Timeline.**  
+
+**Timeline**  
 Approximately 10 months
-**Team & Collaboration.**  
+
+**Team & Collaboration**  
 Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 people with dysarthric speech. 
 
 ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dysarhtria.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dysarthria.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -43,7 +46,7 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 peop
 ---
 
 ## Methods  
-**Approach.**  
+**Approach**  
 - **Recruited participants** with dysarthria and recorded scripted speech tasks under controlled conditions.   
 - **Selected commercial STT solutions** for Spanish and **processed the speech recordings** to obtain transcriptions.  
 - **Measured recognition performance** using metrics such as Word Error Rate (WER) and compared to baseline non-dysarthric data.  
@@ -102,13 +105,13 @@ They combine quantitative performance metrics with qualitative error taxonomy. T
 
 ## Design Recommendations & Impact 
 
-**Recommendations.**  
+**Recommendations**  
 - Integrate **user-specific adaptation** or fine-tuning of STT models for dysarthric speakers to improve recognition.  
 - Build voice input systems with strong error-correction support: suggestions, confirmation, visual feedback, fallback input.  
 - Conduct **co-design sessions with dysarthric users** to understand their articulation patterns and how voice recognition errors affect communication workflows.  
 - Extend research with **multi-speaker datasets** and real-world interaction tasks (e.g., using speech in daily apps).  
 
-**Impact.** 
+**Impact** 
 - Created a dedicated **speech database** of Spanish dysarthric speech, containing 630 recorded voice commands, their transcriptions 
 - Provides **empirical evidence of STT system limitations** for Spanish dysarthric speech, supporting inclusive development.  
 - Helps product teams or researchers working on voice-input aids **understand the performance gap** and necessary features for improvement.  

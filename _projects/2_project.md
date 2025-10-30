@@ -11,17 +11,17 @@ giscus_comments: true
 ---
 
 ## Overview  
-**Context.**  
+**Context**  
 Accessible text design for readers with cognitive or learning disabilities is essential. However, the production of *Easy-to-Read* (E2R) or E2R Spanish *Lectura Fácil* (LF) content remains labor-intensive. Manual adaptation of texts involves rewriting for simpler vocabulary, shorter sentences, layout, and clarity.  
 This study investigated how a tool built on *LanguageTool* (an open-source writing assistant) could support adaptation of Spanish texts into LF by detecting guideline violations, offering simplifications and definitions. 
 
-**My Role.**  
+**My Role**  
 Lead researcher: defined the functional requirements of the tool (named *LFWriteAssist*), aligned LF guidelines with *LanguageTool* custom rules, implemented vocabulary simplification modules, and documented limitations and user-flow design.  
 
-**Timeline.**  
+**Timeline**  
 Approximately 3 months (tool prototype stage, usability testing and development of more rules still pending)
 
-**Team & Collaboration.**  
+**Team & Collaboration**  
 Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany) and HiTZ Center (Basque Country) 
 
 ---
@@ -32,7 +32,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 ---
 
 ## Methods  
-**Approach.**  
+**Approach**  
 - Analyzed the UNE 153101:2018 EX LF standard for LF to identify vocabulary, syntax, layout, and style rules.  
 - Created a set of custom rules in *LanguageTool* (via XML configuration) to flag LF rule-compliance issues: long words, figurative language, acronyms, complex sentences, etc. 
 - Integrated external resources: [*Diccionario Fácil*](https://www.diccionariofacil.org) (easy definitions for complex or polysemous terms) and [*EASIER*](https://github.com/LURMORENO/EASIER_CORPUS) corpus synonyms for readers with cognitive impairments.  
@@ -57,13 +57,13 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 ## Design Recommendations & Impact  
 
-**Recommendations.**  
+**Recommendations**  
 - Integrate the tool into a browser/online platform to reduce installation barriers for accessibility practitioners. 
 - Conduct usability testing with LF translators to assess tool effectiveness, workflow impact, and comprehension outcomes. 
 - Extend rule-based system with layout checks (e.g., line breaks, typography, font, spacing). 
 
 
-**Impact.**  
+**Impact**  
 - Highlighted the value of collaboration between accessibility experts, linguists, and engineers to make inclusive writing scalable.
 - Showed that accessibility principles from linguistic research can be operationalized into automated authoring support. 
 - Offered a reproducible methodology for developing assistive writing. 
@@ -78,7 +78,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 ---
 
-## ✨ Outcome Statement  
+## Outcome Statement  
 > By developing an authoring assistant for *Lectura Fácil* using *LanguageTool*, I showed how linguistic guidelines, automation, and inclusive design can align — while also uncovering critical gaps around layout, user testing, and human-in-the-loop workflows. This project strengthens my capability to lead UX research and tooling for accessible language technology.
 
 
