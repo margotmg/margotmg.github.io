@@ -2,7 +2,7 @@
 layout: page
 title: Accessible Spanish Texts with LanguageTool
 description: Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom authoring assistant
-img: books.jpg
+img: assets/img/languagetool.jpg
 importance: 2
 category: work
 giscus_comments: true
