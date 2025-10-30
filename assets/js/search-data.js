@@ -466,9 +466,9 @@ ninja.data = [{
           description: "A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-towards-reliable-easy-to-read-e2r-texts",
+          title: 'Towards Reliable Easy-to-Read (E2R) Texts',
+          description: "A proposal for standardized evaluation practices for accessible Spanish texts",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
