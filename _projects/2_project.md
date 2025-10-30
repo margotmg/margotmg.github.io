@@ -5,7 +5,7 @@ description: Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom aut
 img: assets/img/languagetool.jpg
 importance: 2
 category: work
-giscus_comments: true
+#giscus_comments: true
 ---
 
 ---
@@ -75,7 +75,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
     </div>
 </div>
 <div class="caption">
-    Workflow
+    Interface of the *LFWriteAssist* tool displaying an example text
 </div>
 
 <div class="row">
@@ -84,7 +84,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
     </div>
 </div>
 <div class="caption">
-    Workflow
+        Interface of the *LFWriteAssist* tool displaying an example text and explanations of the different components
 </div>
 ---
 
