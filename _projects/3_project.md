@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Unlocking Speech Recognition for Spanish Dysarthric Users 
+title: Unlocking Speech Recognition for Spanish Dysarthric Speech 
 description: A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria
 img: assets/img/sound.jpg
 #redirect: https://unsplash.com
