@@ -75,7 +75,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
     </div>
 </div>
 <div class="caption">
-    Interface of the *LFWriteAssist* tool displaying an example text
+    Interface of the LFWriteAssist tool displaying an example text
 </div>
 
 <div class="row">
@@ -84,7 +84,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
     </div>
 </div>
 <div class="caption">
-        Interface of the *LFWriteAssist* tool displaying an example text and explanations of the different components
+        Interface of the LFWriteAssist tool displaying an example text and explanations of the different components
 </div>
 ---
 
