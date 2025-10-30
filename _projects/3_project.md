@@ -30,7 +30,7 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 peop
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    What is dysarthria?
 </div>
 
 
