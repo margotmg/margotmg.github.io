@@ -9,7 +9,7 @@ category: work
 
 ## Overview
 **Context**  
-As part of my PhD in Computational Linguistics, I explored how large language models (LLMs) like ChatGPT can support the adaptation of standard Spanish texts into the *Lectura Fácil* (“Easy-to-Read”) variant; a simplified text format designed for people with cognitive disabilities, low literacy, or language barriers.  
+In this project, I explored how large language models (LLMs) like ChatGPT can support the adaptation of standard Spanish texts into the *Lectura Fácil* (“Easy-to-Read”) variant; a simplified text format designed for people with cognitive disabilities, low literacy, or language barriers.  
 Manual creation of these texts is time-consuming and expensive. This project investigated whether ChatGPT could make this process automatic and scalable.
 
 **My Role**  

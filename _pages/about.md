@@ -36,7 +36,10 @@ I’m a researcher exploring how **new language technologies can help people wit
 💬 Passionate about bridging academic insight and product impact.
 
 
-I am a PhD candidate in Computational Linguistics, specializing in accessibility and Easy-to-Read texts for people with cognitive and intellectual disabilities. My work combines linguistics, technology, and inclusive design, with the goal of making communication clearer and more accessible for all.
+
+
+
+I specialize in accessibility and Easy-to-Read texts for people with cognitive and intellectual disabilities. My work is a combination of linguistics, technology, and inclusive design, with the goal of making communication clearer and more accessible for all.
 
 Beyond my research, I have taught seminars on Machine Translation and Semantics at Darmstadt University of Applied Sciences (Hochshcule Darmstadt) and worked as an English teacher (CELTA-certified).
 
