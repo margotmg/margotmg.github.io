@@ -2,8 +2,8 @@
 layout: page
 title: Unlocking Speech Recognition for Spanish Dysarthric Users 
 description: A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+img: assets/img/sound.jpg
+#redirect: https://unsplash.com
 importance: 3
 category: work
 ---
@@ -14,78 +14,115 @@ category: work
 
 ## Overview  
 **Context.**  
-Automatic Speech Recognition (ASR) / Speech-to-Text (STT) systems have shown promise for users with physical and speech impairments, offering potential accessibility benefits. However, dysarthric speech – resulting from neurological or physical conditions – poses significant recognition challenges. This pilot experiment examines how well STT systems perform on Spanish dysarthric speech. :contentReference[oaicite:1]{index=1}  
+Automatic Speech Recognition (ASR) systems have shown promise for users with speech impairments, offering potential accessibility benefits. However, dysarthric speech (resulting from neurological or physical conditions) poses significant recognition challenges. This pilot experiment examines how well the Microsoft Azure ASR system performs on Spanish dysarthric speech. 
 **My Role.**  
-Lead researcher (or: researcher) designing the pilot, recruiting participants with dysarthric speech, running STT evaluations, analyzing error types and performance metrics, and deriving design implications for assistive voice systems.  
+Lead researcher: designing the pilot study, recruiting participants with dysarthric speech, running ASR evaluations, analyzing error types and performance metrics, and deriving design implications for assistive voice systems.  
 **Timeline.**  
-~3–4 months pilot experiment (recruitment, data collection, STT testing, analysis).  
-**Collaboration.**  
-Worked with speech-therapy units, dysarthria specialists, and speech-technology researchers at participating institutions. :contentReference[oaicite:2]{index=2}
+Approximately 10 months
+**Team & Collaboration.**  
+Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 people with dysarthric speech. 
 
 ---
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/dysarhtria.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This image can also have a caption. It's like magic.
+</div>
+
+
+
+
+
 ## 🎯 Research Question  
-> How accurately do standard Spanish STT systems recognise speech from users with dysarthria, and what error patterns or usability barriers emerge in this context?
+> How accurately do standard Spanish AST systems recognise speech from users with dysarthria, and what error patterns or usability barriers emerge in this context?
 
 ---
 
 ## Methods  
 **Approach.**  
-- Recruited participants with dysarthria and recorded scripted speech tasks under controlled conditions. :contentReference[oaicite:3]{index=3}  
-- Selected commercial or research STT solutions for Spanish and processed the speech recordings to obtain transcriptions.  
-- Measured recognition performance using metrics (Word Error Rate, substitution/deletion rates) and compared to baseline non-dysarthric data.  
-- Conducted qualitative error analysis: categorised mis-recognitions by phonetic difficulties, prosody, articulation, background noise.  
-- Documented usability implications: how recognition errors may impact assistive applications (voice input, dictation, communication aids).
+- **Recruited participants** with dysarthria and recorded scripted speech tasks under controlled conditions.   
+- **Selected commercial STT solutions** for Spanish and **processed the speech recordings** to obtain transcriptions.  
+- **Measured recognition performance** using metrics such as Word Error Rate (WER) and compared to baseline non-dysarthric data.  
+- Conducted **qualitative error analysis**: categorised mis-recognitions by phonetic difficulties, articulation, etc.  
+- Documented usability implications. 
+
+
+
+
+
+
+### 1. **Speech Data Collection**
+- Recruited participants and recorded them: **3 native Spanish speakers** with varying levels of dysarthria producing **210 short voice commands** each (21 different commands, 10 times each).  
+- Commands were chosen from text creation and edition programs.  
+- Participants recorded in their home environment, at different days and times to increase the variability of speech and mimic real-life scenarios.
+
+### 2. **Automatic STT Evaluation**
+- Tested recordings with multiple STT systems: **Google Speech API**, **Whisper**, and a Spanish acoustic model baseline.  
+- Measured **WER** and error types (substitution, deletion, insertion).  
+- Conducted qualitative analysis of recurring error patterns linked to articulation and prosody differences.
+
+### 3. **Live Speech Web Application**
+- Developed a **web interface** enabling real-time speech input from dysarthric users.  
+- Allowed testing of *live recognition* scenarios instead of only pre-recorded audio.  
+- Observed recognition accuracy, and user experience of speaking directly to the system.  
+- Logged text outputs for later analysis and comparison with recorded benchmarks.
+
+### 4. **Human Intelligibility Test**
+- Conducted a **perceptual test** with **85 human listeners**, each transcribing 30 randomly selected voice commands (10 per dysarthric participant).  
+- Goal: compare *human* comprehension to STT accuracy to see whether technology or human listeners perform better—and where intelligibility breaks down.  
+- Measured human transcription accuracy as a percentage of correct words and perceived difficulty.
+
+### 5. **Participant Questionnaire**
+- After all sessions, the three participants with dysarthria completed a short **questionnaire** about:  
+  - Ease/difficulty of recording and live-speech interaction
+  - Fatigue, frustration, and effort levels  
+  - Their opinions about speech technologies and accessibility
+- Collected qualitative reflections on trust, usefulness, and emotional response to speech interfaces.
+
 
 **Why these methods?**  
-They combine quantitative performance metrics (hard evidence) with qualitative error taxonomy (insight into speech impairment impact) — aligning with accessible-technology evaluation and real-user context.
+They combine quantitative performance metrics with qualitative error taxonomy. This aligns with accessible-technology evaluation and real-user context.
 
 ---
 
 ## Key Findings & Insights  
-- STT performance for dysarthric Spanish speech degraded significantly compared to typical speech; WER (Word Error Rate) and deletion/substitution rates were much higher. :contentReference[oaicite:4]{index=4}  
-- Error patterns included: mis-recognition of vowel reductions, consonant blends, prosody disruptions, and non-standard articulation; these point to specific speech-impairment features.  
-- Many recognition errors would significantly reduce usability for assistive scenarios (e.g., voice typing, communication aids) because reliability is low and error correction burden is high.  
-- The study highlights that commercial STT systems are not yet sufficient for dysarthric users, and specialised adaptation/training or user-specific models are needed.
+- **STT performance for dysarthric speech degraded significantly** compared to typical speech.  
+- **Human listeners** still made comprehension errors, especially for moderate-to-severe dysarthric speech.  
+- **Error patterns overlapped** between human and machine transcription, suggesting shared difficulties with certain phonetic distortions.
+- **Cutomized models by the use of finite grammars** improved the results significantly.   
+- The study highlights that **commercial STT systems are not yet sufficient for dysarthric users**, and specialised adaptation/training or user-specific models are needed.
+- Participants’ feedback highlighted both **hope and frustration**: they valued assistive potential but felt current systems fall short in recognizing their speeches. 
 
-**Accessibility & Design Implication.**  
-For assistive voice applications targeting dysarthria, recognition accuracy is critical; designers need to anticipate high error rates, provide error-tolerant input methods (e.g., multimodal fallback, correction UI), and consider inclusive workflows rather than relying solely on “voice works out of the box”.
-
+ 
 ---
 
-## Design Recommendations & Impact  
-**Recommendations.**  
-- Integrate *user-specific adaptation* or fine-tuning of STT models for dysarthric speakers to improve recognition.  
-- Build voice input systems with strong error-correction support: suggestions, confirmation UI, visual feedback, fallback input.  
-- Conduct co-design sessions with dysarthric users to understand their articulation patterns and how voice recognition errors affect communication workflows.  
-- Monitor error types in production and provide transparent feedback to users (e.g., “I heard X — did you mean Y?”) to increase trust in assistive voice tools.
+## Design Recommendations & Impact 
 
-**Impact.**  
-- Provides empirical evidence of STT system limitations for Spanish dysarthric speech, supporting inclusive tech development.  
-- Helps product teams or researchers working on voice-input aids understand the performance gap and necessary features for reliability.  
-- Demonstrates capability to conduct applied accessibility research involving speech impairments, metrics, user contexts, and design implications — valuable for roles bridging speech technology and UX accessibility.
+**Recommendations.**  
+- Integrate **user-specific adaptation** or fine-tuning of STT models for dysarthric speakers to improve recognition.  
+- Build voice input systems with strong error-correction support: suggestions, confirmation, visual feedback, fallback input.  
+- Conduct **co-design sessions with dysarthric users** to understand their articulation patterns and how voice recognition errors affect communication workflows.  
+- Extend research with **multi-speaker datasets** and real-world interaction tasks (e.g., using speech in daily apps).  
+
+**Impact.** 
+- Created a dedicated **speech database** of Spanish dysarthric speech, containing 630 recorded voice commands, their transcriptions 
+- Provides **empirical evidence of STT system limitations** for Spanish dysarthric speech, supporting inclusive development.  
+- Helps product teams or researchers working on voice-input aids **understand the performance gap** and necessary features for improvement.  
+- Demonstrates capability to conduct applied **accessibility research involving speech impairments, metrics, user contexts, and design implications**. 
+
 
 ---
 
 ## Reflections   
 - Working with participants with dysarthria underscored the importance of empathy, flexible test setups, and real-world context (not just lab speech).  
-- A mixed-methods approach (quant + qual) offered richer insight: numbers tell “how much worse”, taxonomy tells “why worse”.  
+- A mixed-methods approach (quantitative + qualitative) offered richer insight: numbers tell “how much worse”, taxonomy tells “why worse”. 
+- The **perceptual test** validated that speech accessibility is not a binary “works/doesn’t work” issue, but a spectrum where even small clarity gains can drastically change usability.  
 - If repeating: I would include live assistive-scenario testing (e.g., voice-dictation tasks, communication device usage) rather than just scripted speech, to capture real-use usability.  
 - I gained stronger understanding of how speech impairments intersect with technology design and how to translate that into actionable system requirements.
-
----
-
-## 🖼️ Artifacts Gallery  
-*(Replace placeholders with actual visuals from the study)*  
-- ![Speech Recording Setup Placeholder](images/recording-setup.png)  
-  *Recording station used with participants and dysarthric speech sample capture.*  
-- ![Error Rate Chart Placeholder](images/wer-chart.png)  
-  *Word Error Rate comparison: typical vs. dysarthric speech.*  
-- ![Error Taxonomy Table Placeholder](images/error-taxonomy-table.png)  
-  *Breakdown of error types (substitutions, deletions, insertion, articulation issues).*  
-- ![Assistive UI Mock-up Placeholder](images/voice-input-ui-mock.png)  
-  *Conceptual assistive voice input UI that accounts for high error rates (correction workflow).*  
-
 
 
 ---

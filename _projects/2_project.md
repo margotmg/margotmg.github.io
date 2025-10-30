@@ -2,7 +2,7 @@
 layout: page
 title: Accessible Spanish Texts with LanguageTool
 description: Enabling Lectura Fácil (Easy-to-Read Spanish) through a custom authoring assistant
-img: languagetool.png
+img: books.jpg
 importance: 2
 category: work
 giscus_comments: true
@@ -77,19 +77,6 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 - If repeated: I would embed an end‐user study early (LF translators in this case) to measure comprehension gain and incorporate accessibility metrics (time to read, error rate) rather than only rule-compliance.
 
 ---
-
-## 🖼️ Artifacts Gallery  
-*(Replace placeholders with actual screenshots/figures)*  
-- ![Tool Interface Placeholder](images/lfwriteassist-interface.png)  
-  *LFWriteAssist interface – input, suggestions panel, output.*  
-- ![Rule Example Table Placeholder](images/rule-examples-table.png)  
-  *Examples of custom rules: figurative language, acronyms, long words.*  
-- ![Workflow Diagram Placeholder](images/lfwriteassist-workflow.png)  
-  *Workflow: Original text → rule check → suggestions → human review → final output.*  
-- ![Limitations Snapshot Placeholder](images/limitations-snapshot.png)  
-  *Visual depiction of gap: layout/format not yet automated.*
-
-
 
 ## ✨ Outcome Statement  
 > By developing an authoring assistant for *Lectura Fácil* using *LanguageTool*, I showed how linguistic guidelines, automation, and inclusive design can align — while also uncovering critical gaps around layout, user testing, and human-in-the-loop workflows. This project strengthens my capability to lead UX research and tooling for accessible language technology.
