@@ -47,7 +47,7 @@ I also work as a wedding planner, a role that allows me to bring creativity, org
 
 I am currently open to opportunities in:
 
-- UX design, UX writing, content design 
+- UX research, UX writing, content design 
 - Accessibility & Inclusive Design
 - Event Organization & Coordination
 
