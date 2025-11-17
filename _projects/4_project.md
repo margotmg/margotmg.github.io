@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Evaluating ChatGPT for E2R text adaptation
-description: Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities
+title: Unpacking Simplified German
+description: An analysis of Leichte Sprache and Einfache Sprache
 img: assets/img/chatgptphoto.jpg
 importance: 1
 category: work
