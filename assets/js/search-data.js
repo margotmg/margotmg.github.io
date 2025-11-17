@@ -70,9 +70,9 @@ ninja.data = [{
           description: "A pilot study evaluating automatic Speech-To-Text (STT) for Spanish speakers with dysarthria",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-evaluating-chatgpt-for-e2r-text-adaptation",
-          title: 'Evaluating ChatGPT for E2R text adaptation',
-          description: "Evaluating how conversational AI supports Easy-to-Read Spanish texts for users with cognitive disabilities",
+            },},{id: "projects-unpacking-simplified-german",
+          title: 'Unpacking Simplified German',
+          description: "An analysis of Leichte Sprache and Einfache Sprache",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{
