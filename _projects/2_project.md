@@ -27,7 +27,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 ---
 
 ## 🎯 Research Question  
-> How can LanguageTool be adapted into a Computer‐Assisted Translation (CAT) tool to support Spanish *Lectura Fácil* (LF) content creation, and what are the benefits and limitations of such an approach?
+> How can LanguageTool be adapted into a Computer‐Assisted Translation (CAT) tool to support Spanish LF content creation, and what are the benefits and limitations of such an approach?
 
 ---
 
@@ -97,7 +97,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 ---
 
 ## Outcome Statement  
-> By developing an authoring assistant for *Lectura Fácil* using *LanguageTool*, I showed how linguistic guidelines, automation, and inclusive design can align — while also uncovering critical gaps around layout, user testing, and human-in-the-loop workflows. This project strengthens my capability to lead UX research and tooling for accessible language technology.
+> By developing an authoring assistant for LF using *LanguageTool*, I showed how linguistic guidelines, automation, and inclusive design can align — while also uncovering critical gaps around layout, user testing, and human-in-the-loop workflows. This project strengthens my capability to lead UX research and tooling for accessible language technology.
 
 
 

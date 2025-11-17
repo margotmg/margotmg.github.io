@@ -23,7 +23,7 @@ Lead researcher: designing the pilot study, recruiting participants with dysarth
 Approximately 10 months
 
 **Team & Collaboration**  
-Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 people with dysarthric speech. 
+Worked with speech-technology researchers at ahoLAB (Basque Country), 3 people with dysarthric speech, and conducted human evaluations with 85 volunteers. 
 
 ---
 
@@ -41,7 +41,7 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 peop
 
 
 ## 🎯 Research Question  
-> How accurately do standard Spanish AST systems recognise speech from users with dysarthria, and what error patterns or usability barriers emerge in this context?
+> How accurately do standard Spanish ASR systems recognize speech from users with dysarthria, and what error patterns or usability barriers emerge in this context?
 
 ---
 
@@ -64,19 +64,19 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 peop
 - Participants recorded in their home environment, at different days and times to increase the variability of speech and mimic real-life scenarios.
 
 ### 2. **Automatic STT Evaluation**
-- Tested recordings with multiple STT systems: **Google Speech API**, **Whisper**, and a Spanish acoustic model baseline.  
+- Tested recordings with Microsoft Azure's STT system and using different settings: with and without a finite grammar, and with and without training the baseline.   
 - Measured **WER** and error types (substitution, deletion, insertion).  
 - Conducted qualitative analysis of recurring error patterns linked to articulation and prosody differences.
 
 ### 3. **Live Speech Web Application**
 - Developed a **web interface** enabling real-time speech input from dysarthric users.  
-- Allowed testing of *live recognition* scenarios instead of only pre-recorded audio.  
+- Allowed testing of **live recognition** scenarios instead of only pre-recorded audio.  
 - Observed recognition accuracy, and user experience of speaking directly to the system.  
 - Logged text outputs for later analysis and comparison with recorded benchmarks.
 
 ### 4. **Human Intelligibility Test**
 - Conducted a **perceptual test** with **85 human listeners**, each transcribing 30 randomly selected voice commands (10 per dysarthric participant).  
-- Goal: compare *human* comprehension to STT accuracy to see whether technology or human listeners perform better—and where intelligibility breaks down.  
+- Goal: compare **human comprehension** to STT accuracy to see whether technology or human listeners perform better—and where intelligibility breaks down.  
 - Measured human transcription accuracy as a percentage of correct words and perceived difficulty.
 
 ### 5. **Participant Questionnaire**
@@ -88,14 +88,14 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), and 3 peop
 
 
 **Why these methods?**  
-They combine quantitative performance metrics with qualitative error taxonomy. This aligns with accessible-technology evaluation and real-user context.
+They combine quantitative performance metrics with qualitative error analysis and usability. This aligns with accessible-technology evaluation and real-user context.
 
 ---
 
 ## Key Findings & Insights  
 - **STT performance for dysarthric speech degraded significantly** compared to typical speech.  
 - **Human listeners** still made comprehension errors, especially for moderate-to-severe dysarthric speech.  
-- **Error patterns overlapped** between human and machine transcription, suggesting shared difficulties with certain phonetic distortions.
+- **Error patterns overlapped** between human and machine transcription, suggesting shared difficulties with certain phonetic distortions. Strong connections were found between system errors, human comprehension ahcllenges, and each speaker's specific pronunciation patterns. 
 - **Cutomized models by the use of finite grammars** improved the results significantly.   
 - The study highlights that **commercial STT systems are not yet sufficient for dysarthric users**, and specialised adaptation/training or user-specific models are needed.
 - Participants’ feedback highlighted both **hope and frustration**: they valued assistive potential but felt current systems fall short in recognizing their speeches. 
@@ -122,7 +122,7 @@ They combine quantitative performance metrics with qualitative error taxonomy. T
 
 ## Reflections   
 - Working with participants with dysarthria underscored the importance of empathy, flexible test setups, and real-world context (not just lab speech).  
-- A mixed-methods approach (quantitative + qualitative) offered richer insight: numbers tell “how much worse”, taxonomy tells “why worse”. 
+- A **mixed-methods approach** (quantitative + qualitative) offered richer insight: numbers tell “how much worse”, taxonomy tells “why worse”. 
 - The **perceptual test** validated that speech accessibility is not a binary “works/doesn’t work” issue, but a spectrum where even small clarity gains can drastically change usability.  
 - If repeating: I would include live assistive-scenario testing (e.g., voice-dictation tasks, communication device usage) rather than just scripted speech, to capture real-use usability.  
 - I gained stronger understanding of how speech impairments intersect with technology design and how to translate that into actionable system requirements.
@@ -131,7 +131,7 @@ They combine quantitative performance metrics with qualitative error taxonomy. T
 ---
 
 ## Outcome Statement  
-> This pilot study exposes the gap between standard Spanish STT systems and the needs of users with dysarthria, offering a foundation for designing accessible voice-input workflows. I applied speech-technology metrics, error analysis, and user-context thinking to derive design recommendations — demonstrating how technical evaluation and inclusive design meet in assistive tools.
+> This pilot study exposes the gap between standard Spanish STT systems and the needs of users with dysarthria, offering a foundation for designing accessible voice-input workflows. I applied speech-technology metrics, error analysis, and user-context thinking to derive design recommendations, demonstrating how technical evaluation and inclusive design meet in assistive tools.
 
 ---
 
