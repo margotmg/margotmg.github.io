@@ -61,15 +61,14 @@ Interviewed editors of the selected broadcasting platforms.
 ## Design Recommendations & Impact
 
 **Recommendations**
-- Combine AI with **human-in-the-loop** review for accessible content creation.   
-- Create **prompt templates and user-tested checklists** to guide consistent, ethical adaptation.  
-- Prioritize **inclusive user testing** from early prototyping; accessibility cannot be retrofitted.
+- Broadcasters would benefit from guidelines grounded in empirical findings rather than only tradition or institutional preference. 
+- Introducing a graded scale of simplification, or explicitly acknowledging continuum-based practices, could help editors select labels that better reflect the actual linguistic properties of a text. 
+- Editors expressed varying understandings of LS and ES. Workshops or reference materials that highlight empirical distinctions, typical linguistic features, and best practices would support greater consistency both within and across broadcasting platforms.
 
 **Impact**
-- Raised awareness about the **distinction between “simplified” and “accessible”** text.  
-- Demonstrated the importance of **qualitative evaluation** for LLM-generated outputs.  
-- Strengthened methodologies for combining computational linguistics and UX research.
-
+- The research provides empirical grounding in a space often shaped by assumptions. It shows that LS and ES occupy overlapping regions of a simplification continuum, shifting the discussion from binary classification toward a more nuanced understanding of text complexity. 
+- Insights from the survey and manual analysis shed light on how editors conceptualize simplification.
+- The study highlights inconsistencies in how LS and ES are applied. This can motivate initiatives toward shared editorial guidelines, fostering more consistent and transparent language accessibility practices across Germany.
 ---
 
 ## Reflections 
