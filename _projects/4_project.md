@@ -77,7 +77,7 @@ Interviewed editors of the selected broadcasting platforms.
 
 - Confirmed that LS and ES are not two completely different simplified variants of the German langauge, but rather stand in a continuum of complexity, with recurrent overlaps in linguistic parameters. 
 - The choice of one label over the other does not necessarily mean that the content is written in that format. 
-- Learned the importance of **empathetic facilitation** when conducting studies with participants with cognitive disabilities, as pacing, clarity, and environment matter deeply. 
+ 
 
 ---
 
