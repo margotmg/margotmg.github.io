@@ -2,66 +2,58 @@
 layout: page
 title: Unpacking Simplified German
 description: An analysis of Leichte Sprache and Einfache Sprache
-img: assets/img/chatgptphoto.jpg
-importance: 1
+img: assets/img/LSundES.jpg
+importance: 4
 category: work
 ---
 
 ## Overview
 **Context**  
-In this project, I explored how large language models (LLMs) like ChatGPT can support the adaptation of standard Spanish texts into their Easy-to-Read variant, *Lectura Fácil* (LF). LF is a simplified text format of Spanish designed for people with cognitive disabilities, low literacy, or language barriers.  
-Manual creation of these texts is time-consuming and expensive. This project investigated whether ChatGPT could make this process automatic and scalable.
+Leichte Sprache (LS) and Einfache Sprache (ES) are two simplified forms of German that are viewed, both socially and theoretically, as distinct language varieties. This distinction suggests that texts identified as LS will differ from those identified as ES. In this article, we present a collection of simplified news texts from public broadcasters labeled as LS or ES and examine how these labels differ and overlap in actual practice.
 
 **My Role**  
-Lead researcher: designed the methodology, ran adaptation experiments, conducted both quantitative and qualitative evaluations, and synthesized actionable design implications for inclusive UX in language technology.
+Researcher: designed the methodology, built dataset, conducted quantitative analyses, conducted survey.  
 
 **Timeline**  
-3-4 months (data selection, prompt design, automatic and manual evaluation, and user study)
+3-4 months (data selection, data collection, linguistic analysis, manual analysis, survey)
 
 **Team & Collaboration**  
-Worked with collaborators at Hochschule Darmstadt (Germany) and HiTZ Center (Basque Country).  
-Included stakeholders representing users with cognitive disabilities.
-
+Worked with collaborators at Hochschule Darmstadt (Germany) and University of Postdam (Germany).  
+Interviewed editors of the selected broadcasting platforms. 
 ---
 
 ## 🎯 Research Question
-> How well can ChatGPT adapt Spanish news-domain texts into the LF variant for users with cognitive disabilities, and what are the usability and accessibility implications?
+> To what extent can specific, empirically identifiable linguistic or structural parameters distinguish between LS and ES news articles, and what factors influence the assignment of one label over the other?
 
 ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/flowchart.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Workflow
-</div>
-
 
 ## Methods
 
 **Approach**
-1. Selected 10 Spanish news texts and performed multiple ChatGPT adaptation experiments.  
-   - 🧠 *Prompt Engineering:* Different prompt styles tested for adherence to LF guidelines (UNE 153101:2018 EX).
-2. Applied a **multi-method evaluation** combining:
-   - 📊 *Automated Readability Analysis:* Measured lexical and syntactic complexity using MultiAzterTest.  
-   - 📝 *Manual Checklist Evaluation:* Two annotators reviewed results using a 10-item accessibility checklist (fluency, simplicity, meaning, layout).  
-   - 👥 *User Testing:* Ten participants with cognitive disabilities compared ChatGPT vs human-adapted versions through reading comprehension tasks and preference feedback.
+1. Collected 300 texts from 4 different broadcasting platforms, which led to a total of 1200 texts.   
+   - **NDR** (LS)
+   - **MDR** (LS)
+   - **Dlf** (ES)
+   - **SR** (ES)
+
+2. Analyzed linguistic features related to complexity to observe whether there are any parameters that can be clearly and empirically assigned to LS or ES. 
+
+3. Conducted surveys with the editors of each broadcasting platform to understand the reasoning behind choosing one label over the other (LS or ES). 
+
+4. Manual analysis was conducted on 12 selected texts (3 per broadcaster). This analysis helped capture nuances that the automatic analysis could not. 
+   
 
 **Why These Methods**
-- Balanced qualitative and quantitative insights.  
-- Explored how the way prompts are written for AI models affects their responses. 
-- Prioritized **inclusive validation** by engaging the intended users directly. In this case, contextual inquiry, A/B testing and comprehension testing were conducted. 
+- Balanced qualitative and quantitative insights, which provided a more detailed analysis of the texts.  
+- Understanding of the use of one tag or another and of the vision that editors have of their own content. 
 
 ---
 
 ## Key Findings & Insights
 
-- ChatGPT performed **well in lexical simplification** (fewer rare words) but **poorly in structural adaptation**, often generating longer, more complex sentences.  
-- Users consistently **preferred the human-adapted versions**, citing better readability and comprehension.  
-- Output consistency varied significantly with prompt design, highlighting reproducibility issues.
-- Automated metrics missed key accessibility aspects like layout, line spacing, and explicit examples, underscoring the need for **human-centered evaluation**.  
+- Certain parameters can be empirically linked to LS or ES. However, the differences are not absolute, as some parameters remain stable across all datasets. 
+- The two varieties cannot be clearly separated based on linguistic features; they form overlapping positions on a continuum of simplification with features that shift depending on editorial practice and broadcaster tendencies 
+- The choice of label reflects editorial practices (R3). ES is preferred for its flexibility, while LS is chosen for its rule-based framework and focus on maximizing comprehensibility.
 
 
 ---
@@ -82,8 +74,8 @@ Included stakeholders representing users with cognitive disabilities.
 
 ## Reflections 
 
-- Confirmed that **mixed-methods evaluation** (quantitative + qualitative) yields richer insight than any single metric.  
-- Gained confidence applying accessibility ethics and recruitment practices transferable to UX research teams.
+- Confirmed that LS and ES are not two completely different simplified variants of the German langauge, but rather stand in a continuum of complexity, with recurrent overlaps in linguistic parameters. 
+- The choice of one label over the other does not necessarily mean that the content is written in that format. 
 - Learned the importance of **empathetic facilitation** when conducting studies with participants with cognitive disabilities, as pacing, clarity, and environment matter deeply. 
 
 ---
@@ -93,5 +85,5 @@ Included stakeholders representing users with cognitive disabilities.
 
 
 
-[📄 Read the full paper here: Madina, M., Gonzalez-Dios, I., & Siegel, M. (2024, May). A preliminary study of ChatGPT for Spanish E2R text adaptation. In Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024) (pp. 1422-1434).](https://aclanthology.org/2024.lrec-main.126.pdf)
+📄 This is a book chapter that is currently under submission. Expected piblication date: December 2025
 
