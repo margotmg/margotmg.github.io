@@ -82,8 +82,7 @@ Interviewed editors of the selected broadcasting platforms.
 ---
 
 ## Outcome Statement
-> By evaluating ChatGPT’s ability to adapt Spanish texts for users with cognitive disabilities, I found that while lexical simplification is achievable, **true accessibility demands human-in-the-loop workflows**, attention to **format and layout**, and **direct user validation**. 
-
+> Our analysis shows that although LS and ES can be linked to distinct linguistic tendencies, these categories overlap considerably in practice. Meaningful accessibility emerges not simply from applying rules or metrics, but from conscious editorial decisions, consistent workflows, and an awareness of how labels shape audience expectations.
 
 
 📄 This is a book chapter that is currently under submission. Expected piblication date: December 2025
