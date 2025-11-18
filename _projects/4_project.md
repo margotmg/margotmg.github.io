@@ -68,7 +68,9 @@ Interviewed editors of the selected broadcasting platforms.
 **Impact**
 - The research provides empirical grounding in a space often shaped by assumptions. It shows that LS and ES occupy overlapping regions of a simplification continuum, shifting the discussion from binary classification toward a more nuanced understanding of text complexity. 
 - Insights from the survey and manual analysis shed light on how editors conceptualize simplification.
-- The study highlights inconsistencies in how LS and ES are applied. This can motivate initiatives toward shared editorial guidelines, fostering more consistent and transparent language accessibility practices across Germany.
+- The study highlights inconsistencies in how LS and ES are applied. This can motivate initiatives toward shared editorial guidelines, fostering more consistent and transparent language accessibility practices acorss Germany. 
+
+
 ---
 
 ## Reflections 
