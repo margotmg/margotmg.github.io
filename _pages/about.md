@@ -31,9 +31,9 @@ social: true # includes social icons at the bottom of the page
 
 I’m a researcher exploring how **new language technologies can help people with disabilities**. My background combines computational linguistics, qualitative research, and inclusive design.  
 
-🌍 Currently finishing my PhD on **accessibility in language technologies**.  
-🧠 Experienced in qualitative research, mixed methods, and cross-disciplinary collaboration.  
-💬 Passionate about bridging academic insight and product impact.
+- Currently finishing my PhD on **accessibility in language technologies**.  
+- Experienced in qualitative research, mixed methods, and cross-disciplinary collaboration.  
+- Passionate about bridging academic insight and product impact.
 
 
 
@@ -43,11 +43,11 @@ I specialize in accessibility and Easy-to-Read texts for people with cognitive a
 
 Beyond my research, I have taught seminars on Machine Translation and Semantics at Darmstadt University of Applied Sciences (Hochshcule Darmstadt) and worked as an English teacher (CELTA-certified).
 
-I also work as a wedding planner, a role that allows me to bring creativity, organization, and attention to detail into unforgettable events. To complement this professional path, I have completed coursework toward a Master’s in Corporate Communications and Event Organization, complementing my practical experience in wedding and event planning. I thrive in roles that connect with people, solve problems, and create meaningful experiences.
+I also work as a wedding planner, a role that allows me to bring creativity, organization, and attention to detail into unforgettable events. To complement this professional path, I have completed coursework toward a **Master’s in Corporate Communications and Event Organization**, complementing my practical experience in **wedding and event planning**. I thrive in roles that connect with people, solve problems, and create meaningful experiences.
 
 I am currently open to opportunities in:
 
-- UX research, UX writing, content design 
+- Project Coordination
 - Accessibility & Inclusive Design
 - Event Organization & Coordination
 
