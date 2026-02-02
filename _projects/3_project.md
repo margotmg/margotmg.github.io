@@ -40,7 +40,7 @@ Worked with speech-technology researchers at ahoLAB (Basque Country), 3 people w
 
 
 
-## 🎯 Research Question  
+## Research Question  
 > How accurately do standard Spanish ASR systems recognize speech from users with dysarthria, and what error patterns or usability barriers emerge in this context?
 
 ---

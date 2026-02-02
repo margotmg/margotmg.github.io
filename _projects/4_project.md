@@ -22,7 +22,7 @@ Worked with collaborators at Hochschule Darmstadt (Germany) and University of Po
 Interviewed editors of the selected broadcasting platforms. 
 ---
 
-## 🎯 Research Question
+## Research Question
 > To what extent can specific, empirically identifiable linguistic or structural parameters distinguish between LS and ES news articles, and what factors influence the assignment of one label over the other?
 
 ---

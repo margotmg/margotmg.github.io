@@ -24,7 +24,7 @@ Included stakeholders representing users with cognitive disabilities.
 
 ---
 
-## 🎯 Research Question
+## Research Question
 > How well can ChatGPT adapt Spanish news-domain texts into the LF variant for users with cognitive disabilities, and what are the usability and accessibility implications?
 
 ---
@@ -43,11 +43,11 @@ Included stakeholders representing users with cognitive disabilities.
 
 **Approach**
 1. Selected 10 Spanish news texts and performed multiple ChatGPT adaptation experiments.  
-   - 🧠 *Prompt Engineering:* Different prompt styles tested for adherence to LF guidelines (UNE 153101:2018 EX).
+   - *Prompt Engineering:* Different prompt styles tested for adherence to LF guidelines (UNE 153101:2018 EX).
 2. Applied a **multi-method evaluation** combining:
-   - 📊 *Automated Readability Analysis:* Measured lexical and syntactic complexity using MultiAzterTest.  
-   - 📝 *Manual Checklist Evaluation:* Two annotators reviewed results using a 10-item accessibility checklist (fluency, simplicity, meaning, layout).  
-   - 👥 *User Testing:* Ten participants with cognitive disabilities compared ChatGPT vs human-adapted versions through reading comprehension tasks and preference feedback.
+   - *Automated Readability Analysis:* Measured lexical and syntactic complexity using MultiAzterTest.  
+   - *Manual Checklist Evaluation:* Two annotators reviewed results using a 10-item accessibility checklist (fluency, simplicity, meaning, layout).  
+   - *User Testing:* Ten participants with cognitive disabilities compared ChatGPT vs human-adapted versions through reading comprehension tasks and preference feedback.
 
 **Why These Methods**
 - Balanced qualitative and quantitative insights.  
