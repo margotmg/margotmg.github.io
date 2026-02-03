@@ -26,7 +26,7 @@ Partnered with linguistic accessibility experts at Hochschule Darmstadt (Germany
 
 ---
 
-## 🎯 Research Question  
+## Research Question  
 > How can LanguageTool be adapted into a Computer‐Assisted Translation (CAT) tool to support Spanish LF content creation, and what are the benefits and limitations of such an approach?
 
 ---

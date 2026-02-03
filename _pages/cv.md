@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /assets/cv/cv.pdf
+permalink: /assets/cv/MargotMadina_cv.pdf
 title: resume
 nav: true
 nav_order: 5
