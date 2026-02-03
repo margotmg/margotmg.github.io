@@ -85,5 +85,5 @@ Interviewed editors of the selected broadcasting platforms.
 > Our analysis shows that although LS and ES can be linked to distinct linguistic tendencies, these categories overlap considerably in practice. Meaningful accessibility emerges not simply from applying rules or metrics, but from conscious editorial decisions, consistent workflows, and an awareness of how labels shape audience expectations.
 
 
-📄 This is a book chapter that is currently under submission. Expected piblication date: December 2025
+📄 This is a book chapter that is currently under submission. Expected piblication date: March 2026
 
