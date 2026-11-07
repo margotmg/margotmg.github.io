@@ -15,6 +15,7 @@ Static site, no build step. Open `index.html`, or serve it:
     styles/main.css     design tokens at the top, then section by section
     scripts/main.js     scroll reveal, nav, capabilities sync, word fade, clock
     events.html         full events gallery
+    writing.html        list of all writing
     writing/            one page per post
     404.html            not-found page
     assets/             served imagery (assets/cv/ holds the CV PDF)

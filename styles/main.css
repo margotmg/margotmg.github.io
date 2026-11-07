@@ -868,6 +868,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .writing__item { border-bottom: var(--rule); }
 
+/* writing.html: the same list, standing alone under the page header */
+.writing__page .writing__list { border-top: var(--rule); }
+.writing__cta { margin-top: var(--space-8); }
+
 .writing__item a {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
