@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margot Madina — Language Technology &amp; Events</title>
+<meta name="description" content="Margot Madina works in two directions: language technology that makes communication reachable for people with disabilities, and the planning and production of weddings and gatherings.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter+Tight:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body id="top">
+
+<!-- ====================== NAV ====================== -->
+<header class="nav" id="nav" data-nav-status="not-active">
+  <div class="nav__contain">
+    <div class="nav__layout">
+
+      <!-- cols 1–3 -->
+      <div class="nav__logo-wrap">
+        <a class="nav__logo" href="#top" aria-label="Margot Madina — home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
+      </div>
+
+      <!-- cols 4–7 -->
+      <div class="nav__service-wrap">
+        <p class="nav__service-text">(Language, Accessibility, &amp; Events.)</p>
+      </div>
+
+      <!-- cols 8–11 on desktop; fullscreen panel on mobile -->
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <ul class="nav__menu-list">
+          <li><a class="nav__link" href="#top" aria-current="true">Home</a></li>
+          <li><a class="nav__link" href="events.html">Events</a></li>
+          <li><a class="nav__link" href="#writing">Writing</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- hidden on desktop, revealed inside the mobile panel -->
+        <ul class="nav__services-list">
+          <li><a class="nav__link" href="events.html">Event Design</a></li>
+          <li><a class="nav__link" href="events.html">Production</a></li>
+          <li><a class="nav__link" href="#writing">Accessibility Research</a></li>
+          <li><a class="nav__link" href="#writing">Writing</a></li>
+        </ul>
+      </nav>
+
+      <!-- col 12 -->
+      <div class="nav__time"><span>London</span> <span id="clock">—:—</span></div>
+
+      <button class="nav__btn" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+        <span class="nav__btn-bar"></span>
+        <span class="nav__btn-bar"></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ====================== HERO ====================== -->
+  <!-- full-height flex column: statement at top, the two gateways pinned to the bottom edge -->
+  <section class="hero">
+    <div class="hero__contain">
+      <div class="hero__layout">
+
+        <h1 class="u-sr-only">Margot Madina — language technology researcher and event producer</h1>
+
+        <div class="hero__top">
+          <p class="hero__statement reveal">
+            I design and deliver experiences that connect people, ideas and stories,
+            both through my research in Language &amp; Accessibility on one side,
+            weddings and large-scale events on the other.
+          </p>
+        </div>
+
+        <div class="hero__bottom">
+
+          <!-- cols 1–6: the two gateways into each practice -->
+          <div class="hero__work-wrap">
+            <div class="hero__work-list">
+
+              <article class="work-card">
+                <p class="work-card__index">[01]</p>
+                <div class="work-card__visual reveal-img">
+                  <img src="assets/events.jpg" alt="Table setting with white poppies, lemons and a lit candle at an outdoor gathering" width="1800" height="1350">
+                </div>
+                <p class="work-card__caption">Events</p>
+                <a class="work-card__link" href="#events"><span class="u-sr-only">Events and production</span></a>
+              </article>
+
+              <article class="work-card">
+                <p class="work-card__index">[02]</p>
+                <div class="work-card__visual reveal-img">
+                  <img src="assets/language.jpg" alt="A vintage typewriter holding a blank sheet of paper" width="1227" height="1800">
+                </div>
+                <p class="work-card__caption">Language &amp; Accessibility</p>
+                <a class="work-card__link" href="#writing"><span class="u-sr-only">Language technology and accessibility</span></a>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- cols 7–12: practice list, then (Scroll.) at the right edge -->
+          <div class="hero__list-wrap">
+
+            <div class="hero__scroll-label">
+              <p>(Scroll.)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== ABOUT ====================== -->
+  <section class="about" id="about">
+    <div class="about__contain">
+      <div class="about__layout">
+
+        <h2 class="u-sr-only">About</h2>
+
+        <div class="about__header">
+          <div class="about__label-wrap">
+            <p>(About.)</p>
+          </div>
+
+          <!-- cols 11–12, 4:5 -->
+          <div class="about__visual-wrap reveal-img">
+            <img src="assets/me.jpg" alt="Black-and-white portrait of Margot Madina in a knitted sweater, looking off to one side, with bare branches behind her." width="1060" height="1760" loading="lazy">
+          </div>
+        </div>
+
+        <div class="about__content-wrap">
+          <!-- JS splits this into words and fades them in across the scroll -->
+          <p class="about__text" data-scroll-text>My background combines event production, experience design, stakeholder management and audience insight — supported by doctoral research in computational linguistics and accessibility.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== SELECTED EVENTS ====================== -->
+  <!-- a short selection; the full set lives on events.html -->
+  <section class="selected" id="events">
+    <div class="selected__contain">
+
+      <div class="selected__header">
+        <p class="selected__title">( Selected Events )</p>
+      </div>
+
+      <div class="selected__list selected__list--brief">
+        <article class="event-card" style="--ratio: 4/5">
+          <p class="event-card__index">[01]</p>
+          <div class="event-card__visual reveal-img">
+            <img src="assets/events/event-01.jpg" alt="Long banquet table set with candles and flowers beside a lit fireplace in a beamed hall" width="1350" height="1800" loading="lazy">
+          </div>
+          <a class="event-card__link" href="events.html"><span class="u-sr-only">View all events</span></a>
+        </article>
+        <article class="event-card" style="--ratio: 3/2">
+          <p class="event-card__index">[02]</p>
+          <div class="event-card__visual reveal-img">
+            <img src="assets/events/event-08.jpg" alt="Guests seated on rattan chairs along a flower-lined aisle at an outdoor ceremony" width="1800" height="1200" loading="lazy">
+          </div>
+          <a class="event-card__link" href="events.html"><span class="u-sr-only">View all events</span></a>
+        </article>
+        <article class="event-card" style="--ratio: 2/3">
+          <p class="event-card__index">[03]</p>
+          <div class="event-card__visual reveal-img">
+            <img src="assets/events/event-05.jpg" alt="Round tables laid for dinner inside a timber barn hung with string lights and greenery" width="1183" height="1800" loading="lazy">
+          </div>
+          <a class="event-card__link" href="events.html"><span class="u-sr-only">View all events</span></a>
+        </article>
+        <article class="event-card" style="--ratio: 4/5">
+          <p class="event-card__index">[04]</p>
+          <div class="event-card__visual reveal-img">
+            <img src="assets/events/event-06.jpg" alt="Outdoor buffet table of bread, flowers and shared dishes among trees in late afternoon light" width="1350" height="1800" loading="lazy">
+          </div>
+          <a class="event-card__link" href="events.html"><span class="u-sr-only">View all events</span></a>
+        </article>
+        <article class="event-card" style="--ratio: 3/2">
+          <p class="event-card__index">[05]</p>
+          <div class="event-card__visual reveal-img">
+            <img src="assets/events/event-07.jpg" alt="A woven rattan double seat framed with red flowers and greenery on a lawn" width="1800" height="1200" loading="lazy">
+          </div>
+          <a class="event-card__link" href="events.html"><span class="u-sr-only">View all events</span></a>
+        </article>
+      </div>
+
+      <div class="selected__cta">
+        <a class="link" href="events.html">All events <span>&#8594;</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================== WRITING ====================== -->
+  <!-- the language & disability side: each entry opens its own page -->
+  <section class="writing" id="writing">
+    <div class="writing__contain">
+
+      <div class="writing__header">
+        <p class="vocation__label">(Writing.)</p>
+        <p class="label">[ Language &amp; Disability ]</p>
+      </div>
+
+      <div class="writing__intro">
+        <p class="writing__lead reveal">
+          Notes on the systems that carry speech and text — and who they leave out.
+        </p>
+      </div>
+
+      <ul class="writing__list">
+        <li class="writing__item reveal">
+          <a href="writing/chatgpt-spanish-easy-to-read.html">
+            <span class="writing__num">01</span>
+            <span class="writing__title">Can ChatGPT write Easy-to-Read Spanish?</span>
+            <span class="writing__tag">Accessibility</span>
+            <span class="writing__arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="writing__item reveal">
+          <a href="writing/languagetool-easy-to-read.html">
+            <span class="writing__num">02</span>
+            <span class="writing__title">A spell-checker, but for Easy-to-Read</span>
+            <span class="writing__tag">Tools</span>
+            <span class="writing__arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="writing__item reveal">
+          <a href="writing/dysarthric-speech-spanish.html">
+            <span class="writing__num">03</span>
+            <span class="writing__title">When the microphone cannot hear you</span>
+            <span class="writing__tag">Speech</span>
+            <span class="writing__arrow">&#8594;</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ====================== CONTACT ====================== -->
+  <section class="contact" id="contact">
+    <div class="contact__contain">
+
+      <p class="vocation__label">(Contact.)</p>
+
+      <ul class="contact__list">
+        <li class="contact__item contact__item--note reveal">
+          <p>Get in touch.</p>
+        </li>
+        <li class="contact__item reveal">
+          <a href="https://www.instagram.com/margot.afweddings/" target="_blank" rel="noopener noreferrer">
+            <span>Instagram</span>
+            <span class="contact__arrow">&#8599;</span>
+          </a>
+        </li>
+        <li class="contact__item reveal">
+          <a href="https://www.linkedin.com/in/margotmadinagonzalez/" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <span class="contact__arrow">&#8599;</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="footer__contain">
+    <span>&copy; <span id="year">2026</span> Margot Madina</span>
+    <span>All rights reserved</span>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

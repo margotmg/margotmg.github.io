@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="inquiries">
+  <defs>
+    <linearGradient id="g18" gradientTransform="rotate(306 .5 .5)">
+      <stop offset="0" stop-color="#c3bfb5"/>
+      <stop offset="1" stop-color="#8d8778"/>
+    </linearGradient>
+    <radialGradient id="r18" cx="64%" cy="51%" r="70%">
+      <stop offset="0" stop-color="#fcfcfc" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fcfcfc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n18" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g18)"/>
+  <rect width="1600" height="900" fill="url(#r18)"/>
+  <rect width="1600" height="900" filter="url(#n18)" opacity=".14" style="mix-blend-mode:multiply"/>
+  <g fill="#0d0d0d" fill-opacity=".38" font-family="DM Mono, ui-monospace, monospace" font-size="31" letter-spacing="1.4">
+    <text x="88" y="828">INQUIRIES</text>
+    <text x="1512" y="828" text-anchor="end">1600×900</text>
+  </g>
+</svg>

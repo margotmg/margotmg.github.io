@@ -1,0 +1,171 @@
+/* ==========================================================================
+   MM Portfolio — interactions
+   1. scroll reveal
+   2. nav hide-on-scroll-down + mobile drawer
+   3. capabilities sticky-media sync
+   4. local clock + year
+   ========================================================================== */
+
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* --- 1. scroll reveal --------------------------------------------------- */
+const revealables = document.querySelectorAll(".reveal, .reveal-img");
+
+if (reduced || !("IntersectionObserver" in window)) {
+  revealables.forEach((el) => el.classList.add("is-inview"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-inview");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.08 }
+  );
+  revealables.forEach((el) => revealObserver.observe(el));
+}
+
+/* --- 2. nav ------------------------------------------------------------- */
+const nav = document.getElementById("nav");
+const toggle = document.getElementById("navToggle");
+const menu = document.getElementById("navMenu");
+let lastY = window.scrollY;
+
+const isMenuOpen = () => nav.dataset.navStatus === "active";
+
+const setMenu = (open) => {
+  nav.dataset.navStatus = open ? "active" : "not-active";
+  toggle?.setAttribute("aria-expanded", String(open));
+  // lock the page behind the fullscreen panel
+  document.body.style.overflow = open ? "hidden" : "";
+  if (open) nav.dataset.hidden = "false";
+};
+
+window.addEventListener(
+  "scroll",
+  () => {
+    const y = window.scrollY;
+    const goingDown = y > lastY;
+    // only hide once past the hero, and never while the menu is open
+    nav.dataset.hidden = String(goingDown && y > 400 && !isMenuOpen());
+    lastY = y;
+  },
+  { passive: true }
+);
+
+toggle?.addEventListener("click", () => setMenu(!isMenuOpen()));
+
+// any link inside the panel closes it
+menu?.addEventListener("click", (e) => {
+  if (e.target.closest("a")) setMenu(false);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isMenuOpen()) setMenu(false);
+});
+
+/* highlight the section currently in view */
+const navLinks = [...document.querySelectorAll('.nav__menu-list a[href^="#"]')];
+const sections = navLinks
+  .map((a) => document.querySelector(a.getAttribute("href")))
+  .filter(Boolean);
+
+if ("IntersectionObserver" in window && sections.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((a) =>
+          a.setAttribute(
+            "aria-current",
+            String(a.getAttribute("href") === `#${entry.target.id}`)
+          )
+        );
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px" }
+  );
+  sections.forEach((s) => sectionObserver.observe(s));
+}
+
+/* --- 3b. about: scroll-driven word opacity --------------------------------
+   Splits the paragraph into words, then maps scroll progress through the
+   element onto a moving edge — words ahead of the edge stay faded.          */
+const scrollTexts = [...document.querySelectorAll("[data-scroll-text]")];
+
+const FADED = 0.18;
+
+scrollTexts.forEach((el) => {
+  const words = el.textContent.trim().split(/\s+/);
+  el.textContent = "";
+  words.forEach((w, i) => {
+    const span = document.createElement("span");
+    span.className = "word";
+    span.textContent = w;
+    span.style.setProperty("--word-opacity", reduced ? 1 : FADED);
+    el.append(span);
+    if (i < words.length - 1) el.append(document.createTextNode(" "));
+  });
+});
+
+if (scrollTexts.length && !reduced) {
+  let ticking = false;
+
+  const paint = () => {
+    ticking = false;
+    scrollTexts.forEach((el) => {
+      const words = el.querySelectorAll(".word");
+      if (!words.length) return;
+
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 0 when the block's top reaches 80% of the viewport,
+      // 1 by the time its bottom passes 35% — the reveal happens in that band
+      const start = vh * 0.8;
+      const end = vh * 0.35;
+      const progress = (start - rect.top) / (start - end + rect.height);
+      const clamped = Math.min(Math.max(progress, 0), 1);
+
+      // soft edge: a few words light up at a time rather than snapping
+      const edge = clamped * (words.length + 6) - 3;
+      words.forEach((word, i) => {
+        const t = Math.min(Math.max((edge - i) / 4 + 0.5, 0), 1);
+        word.style.setProperty("--word-opacity", (FADED + (1 - FADED) * t).toFixed(3));
+      });
+    });
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(paint);
+    },
+    { passive: true }
+  );
+  window.addEventListener("resize", paint, { passive: true });
+  paint();
+}
+
+/* --- 4. clock + year ---------------------------------------------------- */
+const clock = document.getElementById("clock");
+
+const tick = () => {
+  if (!clock) return;
+  clock.textContent = new Intl.DateTimeFormat("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/London",
+  }).format(new Date());
+};
+
+if (clock) {
+  tick();
+  setInterval(tick, 30_000);
+}
+
+const year = document.getElementById("year");
+if (year) year.textContent = String(new Date().getFullYear());

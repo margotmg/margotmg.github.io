@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1280" viewBox="0 0 960 1280" role="img" aria-label="work 03">
+  <defs>
+    <linearGradient id="g7" gradientTransform="rotate(259 .5 .5)">
+      <stop offset="0" stop-color="#d2cbb6"/>
+      <stop offset="1" stop-color="#6f6750"/>
+    </linearGradient>
+    <radialGradient id="r7" cx="41%" cy="64%" r="70%">
+      <stop offset="0" stop-color="#fcfcfc" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fcfcfc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n7" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="1280" fill="url(#g7)"/>
+  <rect width="960" height="1280" fill="url(#r7)"/>
+  <rect width="960" height="1280" filter="url(#n7)" opacity=".14" style="mix-blend-mode:multiply"/>
+  <g fill="#0d0d0d" fill-opacity=".38" font-family="DM Mono, ui-monospace, monospace" font-size="18" letter-spacing="1.4">
+    <text x="53" y="1237">WORK 03</text>
+    <text x="907" y="1237" text-anchor="end">960×1280</text>
+  </g>
+</svg>

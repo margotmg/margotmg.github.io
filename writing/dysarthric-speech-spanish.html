@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When the microphone cannot hear you — Margot Madina</title>
+<meta name="description" content="Voice interfaces work worst for many of the people who would gain most. A pilot adapting speech recognition to three Spanish speakers with dysarthria.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter+Tight:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/figures.css">
+</head>
+<body id="top">
+
+<!-- ====================== NAV ====================== -->
+<header class="nav" id="nav" data-nav-status="not-active">
+  <div class="nav__contain">
+    <div class="nav__layout">
+
+      <div class="nav__logo-wrap">
+        <a class="nav__logo" href="../index.html" aria-label="Margot Madina — home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
+      </div>
+
+      <div class="nav__service-wrap">
+        <p class="nav__service-text">(Language, Accessibility, &amp; Events.)</p>
+      </div>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <ul class="nav__menu-list">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="../events.html">Events</a></li>
+          <li><a class="nav__link" href="../index.html#writing" aria-current="true">Writing</a></li>
+          <li><a class="nav__link" href="../index.html#about">About</a></li>
+          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+        </ul>
+
+        <ul class="nav__services-list">
+          <li><a class="nav__link" href="../events.html">Event Design</a></li>
+          <li><a class="nav__link" href="../events.html">Production</a></li>
+          <li><a class="nav__link" href="../index.html#writing">Accessibility Research</a></li>
+          <li><a class="nav__link" href="../index.html#writing">Writing</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__time"><span>London</span> <span id="clock">—:—</span></div>
+
+      <button class="nav__btn" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+        <span class="nav__btn-bar"></span>
+        <span class="nav__btn-bar"></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<main class="post">
+  <article class="post__contain">
+
+    <header class="post__header">
+      <div class="post__meta">
+        <span class="post__num">[03]</span>
+        <span class="label">Speech</span>
+        <span class="label">ICCHP-AAATE 2022</span>
+      </div>
+
+      <h1 class="post__title">When the microphone cannot hear you</h1>
+
+      <p class="post__standfirst">
+        Voice interfaces promise independence to people with limited mobility. They
+        work worst for many of the people who would gain most. We tried to close
+        that gap for three Spanish speakers with dysarthria.
+      </p>
+    </header>
+
+    <div class="post__body">
+
+      <p>
+        Speech recognition is the obvious interface for someone who cannot easily
+        use their hands. Environmental control systems, virtual assistants, voice
+        dictation &mdash; all of it assumes a microphone is easier than a keyboard.
+      </p>
+
+      <p>
+        <strong>Dysarthria</strong> breaks that assumption. It is a motor speech
+        disorder caused by disturbed neuromuscular control. It does not affect a
+        person&rsquo;s grammar or what they intend to say; it affects articulation.
+        And articulation is precisely what a recogniser is listening for.
+      </p>
+
+      <p>
+        The circularity is cruel. Systems are trained on large speech corpora;
+        large corpora are hard to record from people who find speaking effortful;
+        so the systems are not trained on them; so they do not work for them. For
+        Spanish specifically, there were no dysarthric speech databases at all.
+        Those that exist elsewhere are mostly English, and were collected for
+        clinical diagnosis rather than for training a recogniser.
+      </p>
+
+      <h2 class="post__h2">Four speakers, at home</h2>
+
+      <p>
+        We worked with three speakers with dysarthria and one control. C1 was a
+        13-year-old girl with congenital cerebral palsy &mdash; slow rate, breathy
+        voice, long syllables. M1 was a 51-year-old man, also with congenital
+        cerebral palsy, slurred and somewhat nasal. W1 was a 59-year-old woman
+        whose dysarthria followed brain anoxia, with short speech and unclear
+        vowels. R1, aged 26 with no speech pathology, gave us a ceiling to measure
+        against.
+      </p>
+
+      <p>
+        Each recorded 21 commands across 10 separate sessions &mdash; 210 clips per
+        speaker. Two details there mattered. We shuffled the command order between
+        sessions so the system could not learn a sequence. And everything was
+        recorded at home, on the speakers&rsquo; own schedule, rather than in a lab:
+        the recogniser should be adapted to the room it will actually be used in,
+        and the speakers should not have to travel to be studied.
+      </p>
+
+      <div class="stat-row">
+        <div><span class="bignum">21</span><p>commands per session</p></div>
+        <div><span class="bignum">210</span><p>recordings per speaker</p></div>
+        <div><span class="bignum">85</span><p>human listeners in the perceptual test</p></div>
+      </div>
+
+      <h2 class="post__h2">Four ways to adapt a model</h2>
+
+      <p>
+        We used Microsoft Azure&rsquo;s Custom Speech to Text, which allows a
+        speaker-independent model to be adapted on a small amount of someone&rsquo;s
+        own speech. Training used leave-one-out cross-validation: nine sessions in,
+        the tenth held back for testing.
+      </p>
+
+      <!-- FIGURE 1 -->
+      <figure class="fig fig--wide">
+        <div class="fig__head">
+          <span class="fig__num">Fig. 1</span>
+          <h3 class="fig__title">The four conditions we compared</h3>
+        </div>
+        <div id="fig-models"></div>
+        <figcaption class="fig__caption">
+          Marks show the ranking by accurately recognised commands, worst to best.
+          Every speaker improved over the base model; the best results always came
+          from combining acoustic adaptation with a restricted vocabulary.
+        </figcaption>
+      </figure>
+
+      <p>
+        Both kinds of help mattered, and they compounded. Restricting the vocabulary
+        helps because the system no longer has to consider every Spanish word &mdash;
+        only the commands that exist. Acoustic adaptation helps because the model
+        learns this speaker&rsquo;s particular articulation. Together they beat
+        either alone, for every speaker.
+      </p>
+
+      <p>
+        But the improvement was not even. After training, M1 reached the highest
+        accuracy, then C1, with W1 lowest. The same procedure, the same amount of
+        data, very different outcomes &mdash; because dysarthria is not one
+        condition with one severity. Any claim that a technique &ldquo;works for
+        dysarthric speech&rdquo; should be read with that in mind.
+      </p>
+
+      <h2 class="post__h2">The machines and the humans agreed</h2>
+
+      <p>
+        We also ran a perceptual test: 85 listeners transcribed 30 commands from
+        each speaker and rated how hard each was to understand, from 1 to 5. Ten of
+        the listeners had experience talking with people with dysarthria; that
+        experience made no detectable difference to their scores.
+      </p>
+
+      <!-- FIGURE 2 -->
+      <figure class="fig">
+        <div class="fig__head">
+          <span class="fig__num">Fig. 2</span>
+          <h3 class="fig__title">Human error rate tracks perceived difficulty</h3>
+        </div>
+        <div id="fig-human"></div>
+        <figcaption class="fig__caption">
+          Word error rate from listener transcriptions, against self-reported
+          difficulty (1 very easy, 5 very difficult). Averages: WER 0.827
+          (&plusmn;&nbsp;0.646), difficulty 4.030 (&plusmn;&nbsp;1.210). Source:
+          Table&nbsp;1.
+        </figcaption>
+      </figure>
+
+      <p>
+        The two measures move together: the speaker listeners found hardest is the
+        one they transcribed worst. That is a useful validation &mdash; the
+        difficulty rating is not a vague impression, it corresponds to a measurable
+        failure to understand.
+      </p>
+
+      <p>
+        It also sets the comparison honestly. The adapted models were not merely
+        better than the stock model; for these speakers and these commands they
+        outperformed a room of human listeners. The bar that matters is not
+        &ldquo;as good as typical speech&rdquo;. It is &ldquo;better than the
+        understanding this person currently gets&rdquo;.
+      </p>
+
+      <h2 class="post__h2">Then we put it online</h2>
+
+      <p>
+        Finally we built a live site where the speakers used their own trained model
+        through a microphone, in real time, with no vocabulary restriction &mdash;
+        restricting it is not practical with live input. Accuracy dropped for all
+        three. There was also no longer any &ldquo;not recognised&rdquo; outcome:
+        given live audio the system always returns something, right or wrong.
+      </p>
+
+      <p>
+        That last detail is the one I keep returning to. A system that fails
+        silently tells you it failed. A system that always answers does not. For
+        someone relying on voice to control their environment, a confident wrong
+        answer is a worse failure mode than no answer at all &mdash; and it is the
+        failure mode that live deployment produces.
+      </p>
+
+      <p>
+        This was a pilot with three speakers. It is not a general result and should
+        not be read as one. What it does show is that personal adaptation is worth
+        the effort: the gap between a stock recogniser and one adapted to an
+        individual is large enough to matter in daily use, and the recording burden
+        &mdash; 210 short commands, at home, spread over weeks &mdash; is small
+        enough to be realistic.
+      </p>
+
+      <div class="source">
+        <p>
+          Based on: Margot Madina, Eva Navas and Inma Hern&aacute;ez,
+          &ldquo;Evaluation of STT Technology Performance for Spanish Dysarthric
+          Speech: Description of a Pilot Experiment&rdquo;,
+          <em>ICCHP-AAATE 2022 Open Access Compendium</em>, Linz.
+          <a href="https://doi.org/10.35011/icchp-aaate22-p1-15"
+             target="_blank" rel="noopener noreferrer">Read the paper</a>.
+        </p>
+        <p>
+          The paper labels the third speaker F1 in its participant description and
+          W1 throughout its results; W1 is used here for consistency with the
+          reported figures.
+        </p>
+      </div>
+
+    </div>
+
+    <footer class="post__foot">
+      <a class="link" href="../index.html#writing"><span>&#8592;</span> All writing</a>
+    </footer>
+
+  </article>
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="footer__contain">
+    <span>&copy; <span id="year">2026</span> Margot Madina</span>
+    <span>All rights reserved</span>
+  </div>
+</footer>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/figures.js"></script>
+</body>
+</html>
