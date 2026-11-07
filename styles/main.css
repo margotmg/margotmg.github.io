@@ -1076,19 +1076,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .contact__item a:hover { opacity: 0.55; }
 
 /* the opening row is a statement, not a link */
-.contact__item--note {
-  background: var(--dark-900);
-  border-bottom-color: var(--dark-900);
-}
 .contact__item--note p {
   padding-block: clamp(1.25rem, 0.8rem + 1.8vw, 2.25rem);
-  padding-inline: clamp(1rem, 0.6rem + 1.6vw, 2rem);
   font-family: var(--font-serif);
   font-size: var(--fs-h4);
   font-weight: 400;
   line-height: var(--lh-md);
   letter-spacing: var(--ls-2);
-  color: var(--cream);
+  color: var(--ink-70);
   text-wrap: pretty;
 }
 
