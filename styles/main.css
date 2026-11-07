@@ -185,6 +185,22 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-bottom: var(--rule);
   padding-top: env(safe-area-inset-top, 0px);
   container-type: inline-size;
+  transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+/* once the page is scrolled, the bar turns translucent: the content shows
+   faintly through a frosted wash, the links stay readable */
+.nav[data-scrolled="true"] {
+  background: color-mix(in srgb, var(--ground) 65%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  backdrop-filter: blur(14px) saturate(1.1);
+  border-bottom-color: var(--ink-10);
+}
+/* the open mobile menu is a fixed full-screen panel inside the nav; a
+   backdrop-filter would trap it inside the bar, so drop it while open */
+.nav[data-nav-status="active"] {
+  background: var(--ground);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .nav__contain {

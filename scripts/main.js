@@ -48,6 +48,11 @@ const setNavOffset = () =>
 setNavOffset();
 window.addEventListener("resize", setNavOffset);
 
+// translucent header once the page has scrolled
+const markScrolled = () => { nav.dataset.scrolled = String(window.scrollY > 8); };
+markScrolled();
+window.addEventListener("scroll", markScrolled, { passive: true });
+
 toggle?.addEventListener("click", () => setMenu(!isMenuOpen()));
 
 // any link inside the panel closes it
