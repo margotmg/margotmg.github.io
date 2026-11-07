@@ -413,7 +413,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: var(--site-gutter);
-  align-items: end;
+  /* top-aligned so the index + photo line up even when one caption wraps
+     ("Language & Accessibility" runs to two lines on phones) */
+  align-items: start;
 }
 
 .work-card {
