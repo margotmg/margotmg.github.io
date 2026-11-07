@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A spell-checker, but for Easy-to-Read — Margot Madina</title>
+<title>A spell-checker, but for Easy-to-Read | Margot Madina</title>
 <meta name="description" content="Most Spanish text-simplification tools no longer run. We built LFWriteAssist on LanguageTool instead, and taught it when to stay quiet.">
 <link rel="canonical" href="https://margotmg.github.io/writing/languagetool-easy-to-read.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Margot Madina">
-<meta property="og:title" content="A spell-checker, but for Easy-to-Read — Margot Madina">
+<meta property="og:title" content="A spell-checker, but for Easy-to-Read | Margot Madina">
 <meta property="og:description" content="Most Spanish text-simplification tools no longer run. We built LFWriteAssist on LanguageTool instead, and taught it when to stay quiet.">
 <meta property="og:url" content="https://margotmg.github.io/writing/languagetool-easy-to-read.html">
 <meta property="og:image" content="https://margotmg.github.io/assets/language.jpg">
@@ -32,7 +32,7 @@
     <div class="nav__layout">
 
       <div class="nav__logo-wrap">
-        <a class="nav__logo" href="../index.html" aria-label="Margot Madina — home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
+        <a class="nav__logo" href="../index.html" aria-label="Margot Madina, home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
       </div>
 
       <div class="nav__service-wrap">
@@ -56,7 +56,7 @@
         </ul>
       </nav>
 
-      <div class="nav__time"><span>London</span> <span id="clock">—:—</span></div>
+      <div class="nav__time"><span>London</span> <span id="clock">--:--</span></div>
 
       <button class="nav__btn" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
         <span class="nav__btn-bar"></span>
@@ -81,7 +81,7 @@
 
       <p class="post__standfirst">
         Most Spanish text-simplification tools do not run any more. So we built
-        ours on something that already does &mdash; and taught it when to stay
+        ours on something that already does, and taught it when to stay
         quiet.
       </p>
     </header>
@@ -97,7 +97,7 @@
 
       <p>
         That question has been asked before. Surveying what already exists for
-        Spanish, we found a long list of projects &mdash; and a short list of
+        Spanish, we found a long list of projects, but a short list of
         things you can actually use today.
       </p>
 
@@ -124,7 +124,7 @@
 
       <p>
         So rather than build another standalone prototype, we built on
-        <strong>LanguageTool</strong> &mdash; an open-source, multilingual
+        <strong>LanguageTool</strong>, an open-source, multilingual
         proofreader supporting 30 languages, already integrated into browsers and
         office software, with an active community maintaining it. We wrote
         <em>Lectura F&aacute;cil</em> rules for it and wrapped the result in an
@@ -135,7 +135,7 @@
 
       <p>
         LanguageTool rules are XML patterns. A rule matches some text, explains
-        what is wrong, and &mdash; optionally &mdash; offers a replacement. That
+        what is wrong, and optionally offers a replacement. That
         optional part turned out to be the most interesting design decision in the
         whole tool.
       </p>
@@ -176,8 +176,7 @@
         Some rules in the standard resisted implementation entirely.
         &ldquo;Avoid words that do not add information&rdquo; and &ldquo;do not use
         nominal phrases&rdquo; require judgement about meaning, not pattern
-        matching. We set those aside rather than approximate them badly &mdash; a
-        rule that fires on the wrong things trains its user to ignore it.
+        matching. We set those aside rather than approximate them badly. A rule that fires on the wrong things trains its user to ignore it.
       </p>
 
       <h2 class="post__h2">What the tool knows</h2>
@@ -193,8 +192,7 @@
 
       <p>
         We added a few checks in Python that LanguageTool&rsquo;s pattern language
-        handles poorly &mdash; detecting over-long sentences and over-long words
-        &mdash; and a slider controlling how aggressively the text is summarised,
+        handles poorly (detecting over-long sentences and over-long words), plus a slider controlling how aggressively the text is summarised,
         with 100% preserving everything in the source.
       </p>
 
