@@ -268,9 +268,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav__link:hover::after,
 .nav__link[aria-current="true"]::after { transform: scaleX(1); }
 
-/* disciplines — hidden on desktop, shown only inside the mobile panel */
-.nav__services-list { display: none; }
-
 /* --- time (col 12) --- */
 /* place + time, as the original sets it: sans at body size, sentence case */
 .nav__time {
@@ -336,8 +333,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
     transition: clip-path 1s cubic-bezier(0.9, 0, 0.1, 1);
   }
 
-  .nav__menu-list,
-  .nav__services-list {
+  .nav__menu-list {
     transform: translateY(2rem);
     opacity: 0;
     transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.2s,
@@ -352,18 +348,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   }
   .nav__menu-list .nav__link { font-size: 2.5rem; }
 
-  .nav__services-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-    margin-top: clamp(2rem, 1rem + 4vw, 3.5rem);
-  }
-
   .nav[data-nav-status="active"] .nav__menu {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
-  .nav[data-nav-status="active"] .nav__menu-list,
-  .nav[data-nav-status="active"] .nav__services-list {
+  .nav[data-nav-status="active"] .nav__menu-list {
     opacity: 1;
     transform: translateY(0);
   }
