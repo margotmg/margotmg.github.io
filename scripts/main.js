@@ -66,28 +66,43 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && isMenuOpen()) setMenu(false);
 });
 
-/* highlight the section currently in view */
-const navLinks = [...document.querySelectorAll('.nav__menu-list a[href^="#"]')];
-const sections = navLinks
-  .map((a) => document.querySelector(a.getAttribute("href")))
-  .filter(Boolean);
+/* highlight the section currently in view
+   The section crossing the middle of the screen wins; above the first
+   section (the hero) that is "Home" (#top).                               */
+const menuLinks = [...document.querySelectorAll(".nav__menu-list a")];
+const pageSections = [...document.querySelectorAll("main > section[id]")];
+// which menu link belongs to a section: "#id", or the events page for #events
+const linkFor = (id) =>
+  menuLinks.find((a) => {
+    const href = a.getAttribute("href");
+    return href === `#${id}` || (id === "events" && href === "events.html");
+  });
 
-if ("IntersectionObserver" in window && sections.length) {
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((a) =>
-          a.setAttribute(
-            "aria-current",
-            String(a.getAttribute("href") === `#${entry.target.id}`)
-          )
-        );
-      });
-    },
-    { rootMargin: "-45% 0px -45% 0px" }
-  );
-  sections.forEach((s) => sectionObserver.observe(s));
+function updateCurrentLink() {
+  const middle = window.innerHeight / 2;
+  let current = "top";
+  pageSections.forEach((sec) => {
+    if (sec.getBoundingClientRect().top <= middle) current = sec.id;
+  });
+  // at the very bottom, the last section is current even if it is short
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2 && pageSections.length) {
+    current = pageSections[pageSections.length - 1].id;
+  }
+  const active = linkFor(current);
+  menuLinks.forEach((a) => a.setAttribute("aria-current", String(a === active)));
+}
+
+// only on the homepage (the page whose menu links point at its own sections)
+if (pageSections.length && linkFor("top")) {
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { updateCurrentLink(); ticking = false; });
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  updateCurrentLink();
 }
 
 /* --- 3b. about: scroll-driven word opacity --------------------------------
