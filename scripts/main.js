@@ -177,3 +177,54 @@ if (clock) {
 
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
+
+/* --- 5. slower, eased scroll for same-page links -------------------------
+   The browser's smooth scroll is fixed and quick; this one takes ~1.2–1.6s
+   depending on distance. Any wheel/touch/key input from the visitor cancels
+   it so they're never fighting the page.                                    */
+(() => {
+  if (reduced) return;
+  const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const html = document.documentElement;
+  let frame = null;
+  let prevBehavior = "";
+  const cancel = () => {
+    if (!frame) return;
+    cancelAnimationFrame(frame);
+    frame = null;
+    html.style.scrollBehavior = prevBehavior;
+  };
+  ["wheel", "touchstart", "keydown"].forEach((ev) =>
+    window.addEventListener(ev, cancel, { passive: true })
+  );
+
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const id = a.getAttribute("href").slice(1);
+    const target = id === "top" ? document.body : document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+
+    const offset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    const startY = window.scrollY;
+    const maxY = document.documentElement.scrollHeight - window.innerHeight;
+    const endY = id === "top" ? 0 : Math.min(maxY, target.getBoundingClientRect().top + startY - offset);
+    const distance = endY - startY;
+    const duration = Math.min(1600, Math.max(1200, 900 + Math.abs(distance) * 0.15));
+
+    // the page's CSS smooth-scroll would fight each frame, so switch it off while animating
+    cancel();
+    prevBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    const t0 = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - t0) / duration);
+      window.scrollTo(0, startY + distance * ease(t));
+      if (t < 1) frame = requestAnimationFrame(step);
+      else { frame = null; html.style.scrollBehavior = prevBehavior; }
+    };
+    frame = requestAnimationFrame(step);
+    history.pushState(null, "", `#${id}`);
+  });
+})();
