@@ -64,11 +64,11 @@ document.addEventListener("keydown", (e) => {
    section (the hero) that is "Home" (#top).                               */
 const menuLinks = [...document.querySelectorAll(".nav__menu-list a")];
 const pageSections = [...document.querySelectorAll("main > section[id]")];
-// which menu link belongs to a section: "#id", or the events page for #events
+// which menu link belongs to a section: "#id", or its own page (events.html, writing.html)
 const linkFor = (id) =>
   menuLinks.find((a) => {
     const href = a.getAttribute("href");
-    return href === `#${id}` || (id === "events" && href === "events.html");
+    return href === `#${id}` || href === `${id}.html`;
   });
 
 function updateCurrentLink() {
