@@ -173,18 +173,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .reveal-img.is-inview img { transform: none; }
 
 /* ==========================================================================
-   NAV  — 12-column grid, transparent, fixed
+   NAV  — 12-column grid, solid, fixed to the top
    logo 1–3 | descriptor 4–7 | links 8–11 | time 12
    ========================================================================== */
 .nav {
   position: fixed;
   inset: 0 0 auto;
   z-index: 99;
-  background: transparent;
+  /* solid bar pinned to the top: content scrolls underneath, never behind see-through text */
+  background: var(--ground);
+  border-bottom: var(--rule);
+  padding-top: env(safe-area-inset-top, 0px);
   container-type: inline-size;
-  transition: transform 0.45s var(--ease);
 }
-.nav[data-hidden="true"] { transform: translateY(-100%); }
 
 .nav__contain {
   width: calc(100% - var(--site-margin) * 2);
@@ -1044,20 +1045,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ==========================================================================
    CONTACT — three links, nothing else
    ========================================================================== */
-/* black section: re-point the ink tokens at cream so every rule inside flips.
-   The homepage footer follows straight after, so it shares the black ground. */
 .contact { padding-block: var(--section-y); }
-.contact,
-main:has(> .contact:last-child) + .footer {
-  background: var(--dark-900);
-  color: var(--cream);
-  --ink: var(--cream);
-  --ink-70: color-mix(in srgb, var(--cream) 70%, transparent);
-  --ink-40: color-mix(in srgb, var(--cream) 45%, transparent);
-  --ink-20: color-mix(in srgb, var(--cream) 22%, transparent);
-  --ink-10: color-mix(in srgb, var(--cream) 10%, transparent);
-  --rule: 1px solid var(--ink-20);
-}
 
 .contact__contain {
   width: calc(100% - var(--site-margin) * 2);
@@ -1088,14 +1076,19 @@ main:has(> .contact:last-child) + .footer {
 .contact__item a:hover { opacity: 0.55; }
 
 /* the opening row is a statement, not a link */
+.contact__item--note {
+  background: var(--dark-900);
+  border-bottom-color: var(--dark-900);
+}
 .contact__item--note p {
   padding-block: clamp(1.25rem, 0.8rem + 1.8vw, 2.25rem);
+  padding-inline: clamp(1rem, 0.6rem + 1.6vw, 2rem);
   font-family: var(--font-serif);
   font-size: var(--fs-h4);
   font-weight: 400;
   line-height: var(--lh-md);
   letter-spacing: var(--ls-2);
-  color: var(--ink-70);
+  color: var(--cream);
   text-wrap: pretty;
 }
 

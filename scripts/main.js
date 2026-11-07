@@ -1,7 +1,7 @@
 /* ==========================================================================
    MM Portfolio — interactions
    1. scroll reveal
-   2. nav hide-on-scroll-down + mobile drawer
+   2. nav (pinned to the top) + mobile drawer
    3. capabilities sticky-media sync
    4. local clock + year
    ========================================================================== */
@@ -31,7 +31,6 @@ if (reduced || !("IntersectionObserver" in window)) {
 const nav = document.getElementById("nav");
 const toggle = document.getElementById("navToggle");
 const menu = document.getElementById("navMenu");
-let lastY = window.scrollY;
 
 const isMenuOpen = () => nav.dataset.navStatus === "active";
 
@@ -40,20 +39,14 @@ const setMenu = (open) => {
   toggle?.setAttribute("aria-expanded", String(open));
   // lock the page behind the fullscreen panel
   document.body.style.overflow = open ? "hidden" : "";
-  if (open) nav.dataset.hidden = "false";
 };
 
-window.addEventListener(
-  "scroll",
-  () => {
-    const y = window.scrollY;
-    const goingDown = y > lastY;
-    // only hide once past the hero, and never while the menu is open
-    nav.dataset.hidden = String(goingDown && y > 400 && !isMenuOpen());
-    lastY = y;
-  },
-  { passive: true }
-);
+// the nav stays pinned at the top (no hide-on-scroll); keep anchor jumps
+// (#about, #writing…) from landing underneath it
+const setNavOffset = () =>
+  document.documentElement.style.setProperty("scroll-padding-top", `${nav.offsetHeight}px`);
+setNavOffset();
+window.addEventListener("resize", setNavOffset);
 
 toggle?.addEventListener("click", () => setMenu(!isMenuOpen()));
 
