@@ -23,21 +23,21 @@
   box.setAttribute('aria-label', 'Photo viewer');
   box.innerHTML = `
     <button class="lightbox__close" type="button" aria-label="Close photo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
-    </button>
-    <figure class="lightbox__figure">
+    <div class="lightbox__stage">
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
       <img class="lightbox__img" alt="">
-      <figcaption class="lightbox__caption">
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+      <p class="lightbox__caption">
         <span class="lightbox__count"></span>
         <span class="lightbox__credit"></span>
-      </figcaption>
-    </figure>
-    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
-    </button>`;
+      </p>
+    </div>`;
   document.body.appendChild(box);
 
   const imgEl = box.querySelector('.lightbox__img');
@@ -50,14 +50,26 @@
   let current = 0;
   let lastFocus = null;
   const pad = (n) => String(n).padStart(2, '0');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function show(i) {
+  // dir: -1 = came from the left (previous), 1 = from the right (next), 0 = just opened
+  function show(i, dir = 0) {
     current = (i + items.length) % items.length;
     const it = items[current];
     imgEl.src = it.img.currentSrc || it.img.src;
     imgEl.alt = it.img.alt;
     countEl.textContent = `[${pad(current + 1)}] / ${pad(items.length)}`;
     creditEl.innerHTML = it.credit ? it.credit.innerHTML : '';
+    if (!reduceMotion && imgEl.animate) {
+      imgEl.getAnimations().forEach((a) => a.cancel()); // fast key presses: don't stack
+      imgEl.animate(
+        [
+          { opacity: 0, transform: dir ? `translateX(${dir * 40}px)` : 'scale(0.96)' },
+          { opacity: 1, transform: 'none' },
+        ],
+        { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+      );
+    }
     // preload neighbours so arrows feel instant
     [current - 1, current + 1].forEach((n) => {
       const nb = items[(n + items.length) % items.length];
@@ -95,8 +107,8 @@
 
   // ---- controls ----
   closeBtn.addEventListener('click', close);
-  prevBtn.addEventListener('click', () => show(current - 1));
-  nextBtn.addEventListener('click', () => show(current + 1));
+  prevBtn.addEventListener('click', () => show(current - 1, -1));
+  nextBtn.addEventListener('click', () => show(current + 1, 1));
 
   // click anywhere that isn't the photo, its caption, or a control → close
   box.addEventListener('click', (e) => {
@@ -107,8 +119,8 @@
   document.addEventListener('keydown', (e) => {
     if (box.hidden) return;
     if (e.key === 'Escape') close();
-    else if (e.key === 'ArrowLeft') show(current - 1);
-    else if (e.key === 'ArrowRight') show(current + 1);
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1, -1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1, 1); }
     else if (e.key === 'Tab') {
       // keep focus inside the viewer
       const f = Array.from(box.querySelectorAll('button, a[href]'));
@@ -127,7 +139,7 @@
     if (startX === null) return;
     const dx = e.changedTouches[0].clientX - startX;
     const dy = e.changedTouches[0].clientY - startY;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
     startX = null;
   });
 })();
