@@ -208,7 +208,7 @@
       p.style.setProperty("--i", i);
       p.innerHTML = `<span>P${u.id}</span><span class="person__pref">LF</span>`;
       p.title =
-        `Participant ${u.id} — retold ChatGPT: ${u.retellGpt ? "yes" : "no"}, ` +
+        `Participant ${u.id}: retold ChatGPT: ${u.retellGpt ? "yes" : "no"}, ` +
         `retold LF: ${u.retellLf ? "yes" : "no"}, preferred: Lectura Fácil`;
       grid.append(p);
     });

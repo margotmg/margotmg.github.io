@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>When the microphone cannot hear you — Margot Madina</title>
+<title>When the microphone cannot hear you | Margot Madina</title>
 <meta name="description" content="Voice interfaces work worst for many of the people who would gain most. A pilot adapting speech recognition to three Spanish speakers with dysarthria.">
 <link rel="canonical" href="https://margotmg.github.io/writing/dysarthric-speech-spanish.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Margot Madina">
-<meta property="og:title" content="When the microphone cannot hear you — Margot Madina">
+<meta property="og:title" content="When the microphone cannot hear you | Margot Madina">
 <meta property="og:description" content="Voice interfaces work worst for many of the people who would gain most. A pilot adapting speech recognition to three Spanish speakers with dysarthria.">
 <meta property="og:url" content="https://margotmg.github.io/writing/dysarthric-speech-spanish.html">
 <meta property="og:image" content="https://margotmg.github.io/assets/language.jpg">
@@ -32,7 +32,7 @@
     <div class="nav__layout">
 
       <div class="nav__logo-wrap">
-        <a class="nav__logo" href="../index.html" aria-label="Margot Madina — home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
+        <a class="nav__logo" href="../index.html" aria-label="Margot Madina, home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
       </div>
 
       <div class="nav__service-wrap">
@@ -56,7 +56,7 @@
         </ul>
       </nav>
 
-      <div class="nav__time"><span>London</span> <span id="clock">—:—</span></div>
+      <div class="nav__time"><span>London</span> <span id="clock">--:--</span></div>
 
       <button class="nav__btn" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
         <span class="nav__btn-bar"></span>
@@ -91,7 +91,7 @@
       <p>
         Speech recognition is the obvious interface for someone who cannot easily
         use their hands. Environmental control systems, virtual assistants, voice
-        dictation &mdash; all of it assumes a microphone is easier than a keyboard.
+        dictation: all of it assumes a microphone is easier than a keyboard.
       </p>
 
       <p>
@@ -114,8 +114,7 @@
 
       <p>
         We worked with three speakers with dysarthria and one control. C1 was a
-        13-year-old girl with congenital cerebral palsy &mdash; slow rate, breathy
-        voice, long syllables. M1 was a 51-year-old man, also with congenital
+        13-year-old girl with congenital cerebral palsy, with a slow rate, breathy voice and long syllables. M1 was a 51-year-old man, also with congenital
         cerebral palsy, slurred and somewhat nasal. W1 was a 59-year-old woman
         whose dysarthria followed brain anoxia, with short speech and unclear
         vowels. R1, aged 26 with no speech pathology, gave us a ceiling to measure
@@ -123,8 +122,7 @@
       </p>
 
       <p>
-        Each recorded 21 commands across 10 separate sessions &mdash; 210 clips per
-        speaker. Two details there mattered. We shuffled the command order between
+        Each recorded 21 commands across 10 separate sessions, giving 210 clips per speaker. Two details there mattered. We shuffled the command order between
         sessions so the system could not learn a sequence. And everything was
         recorded at home, on the speakers&rsquo; own schedule, rather than in a lab:
         the recogniser should be adapted to the room it will actually be used in,
@@ -162,8 +160,7 @@
 
       <p>
         Both kinds of help mattered, and they compounded. Restricting the vocabulary
-        helps because the system no longer has to consider every Spanish word &mdash;
-        only the commands that exist. Acoustic adaptation helps because the model
+        helps because the system no longer has to consider every Spanish word, only the commands that exist. Acoustic adaptation helps because the model
         learns this speaker&rsquo;s particular articulation. Together they beat
         either alone, for every speaker.
       </p>
@@ -171,7 +168,7 @@
       <p>
         But the improvement was not even. After training, M1 reached the highest
         accuracy, then C1, with W1 lowest. The same procedure, the same amount of
-        data, very different outcomes &mdash; because dysarthria is not one
+        data, very different outcomes. That is because dysarthria is not one
         condition with one severity. Any claim that a technique &ldquo;works for
         dysarthric speech&rdquo; should be read with that in mind.
       </p>
@@ -202,8 +199,7 @@
 
       <p>
         The two measures move together: the speaker listeners found hardest is the
-        one they transcribed worst. That is a useful validation &mdash; the
-        difficulty rating is not a vague impression, it corresponds to a measurable
+        one they transcribed worst. That is a useful validation: the difficulty rating is not a vague impression; it corresponds to a measurable
         failure to understand.
       </p>
 
@@ -219,8 +215,7 @@
 
       <p>
         Finally we built a live site where the speakers used their own trained model
-        through a microphone, in real time, with no vocabulary restriction &mdash;
-        restricting it is not practical with live input. Accuracy dropped for all
+        through a microphone, in real time, with no vocabulary restriction, since restricting it is not practical with live input. Accuracy dropped for all
         three. There was also no longer any &ldquo;not recognised&rdquo; outcome:
         given live audio the system always returns something, right or wrong.
       </p>
@@ -229,7 +224,7 @@
         That last detail is the one I keep returning to. A system that fails
         silently tells you it failed. A system that always answers does not. For
         someone relying on voice to control their environment, a confident wrong
-        answer is a worse failure mode than no answer at all &mdash; and it is the
+        answer is a worse failure mode than no answer at all, and it is the
         failure mode that live deployment produces.
       </p>
 
@@ -237,8 +232,7 @@
         This was a pilot with three speakers. It is not a general result and should
         not be read as one. What it does show is that personal adaptation is worth
         the effort: the gap between a stock recogniser and one adapted to an
-        individual is large enough to matter in daily use, and the recording burden
-        &mdash; 210 short commands, at home, spread over weeks &mdash; is small
+        individual is large enough to matter in daily use, and the recording burden (210 short commands, at home, spread over weeks) is small
         enough to be realistic.
       </p>
 

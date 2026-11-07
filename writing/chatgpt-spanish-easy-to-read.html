@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Can ChatGPT write Easy-to-Read Spanish? — Margot Madina</title>
+<title>Can ChatGPT write Easy-to-Read Spanish? | Margot Madina</title>
 <meta name="description" content="We gave ChatGPT ten news articles, the official Lectura Fácil rulebook, and ten readers who depend on Easy-to-Read. Every one preferred the human version.">
 <link rel="canonical" href="https://margotmg.github.io/writing/chatgpt-spanish-easy-to-read.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Margot Madina">
-<meta property="og:title" content="Can ChatGPT write Easy-to-Read Spanish? — Margot Madina">
+<meta property="og:title" content="Can ChatGPT write Easy-to-Read Spanish? | Margot Madina">
 <meta property="og:description" content="We gave ChatGPT ten news articles, the official Lectura Fácil rulebook, and ten readers who depend on Easy-to-Read. Every one preferred the human version.">
 <meta property="og:url" content="https://margotmg.github.io/writing/chatgpt-spanish-easy-to-read.html">
 <meta property="og:image" content="https://margotmg.github.io/assets/language.jpg">
@@ -32,7 +32,7 @@
     <div class="nav__layout">
 
       <div class="nav__logo-wrap">
-        <a class="nav__logo" href="../index.html" aria-label="Margot Madina — home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
+        <a class="nav__logo" href="../index.html" aria-label="Margot Madina, home"><span aria-hidden="true">MM</span><span class="u-sr-only">Margot Madina</span></a>
       </div>
 
       <div class="nav__service-wrap">
@@ -56,7 +56,7 @@
         </ul>
       </nav>
 
-      <div class="nav__time"><span>London</span> <span id="clock">—:—</span></div>
+      <div class="nav__time"><span>London</span> <span id="clock">--:--</span></div>
 
       <button class="nav__btn" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
         <span class="nav__btn-bar"></span>
@@ -89,8 +89,7 @@
     <div class="post__body">
 
       <p>
-        Roughly 16% of the world&rsquo;s adults lack literacy skills &mdash; around
-        759 million people. After the pandemic, the number of children struggling
+        Roughly 16% of the world&rsquo;s adults lack literacy skills, around 759 million people. After the pandemic, the number of children struggling
         with reading rose from 460 million to 584 million. These are not edge
         cases. They describe a substantial share of the people any public text is
         written for.
@@ -101,14 +100,13 @@
         a language, with its own vocabulary, syntax and layout rules, designed so
         that a document can actually be understood. In Spanish it is called
         <em>Lectura F&aacute;cil</em> (LF), and since 2018 it has had a formal
-        standard &mdash; UNE 153101:2018 EX &mdash; running to 130 rules.
+        standard, UNE 153101:2018 EX, which runs to 130 rules.
       </p>
 
       <p>
         It is also slow and expensive to produce. The standard describes a two-phase
         process: an adaptor rewrites the document with a designer, then a group of
-        validators &mdash; people with reading comprehension difficulties &mdash;
-        read it and report what they could not follow. The draft goes back and round
+        validators (people with reading comprehension difficulties) read it and report what they could not follow. The draft goes back and round
         again until they confirm it is comprehensible. That loop is the reason E2R
         texts are scarce, and it is the reason an automatic shortcut is tempting.
       </p>
@@ -116,7 +114,7 @@
       <p>
         So we tested one. If a large language model could do even part of this work,
         it would matter. The question was not whether ChatGPT could produce something
-        simpler &mdash; it plainly can &mdash; but whether what it produces is
+        simpler, which it plainly can, but whether what it produces is
         <em>Easy-to-Read</em> in the sense the standard and its readers mean.
       </p>
 
@@ -147,10 +145,7 @@
 
       <p>
         We wrote a prompt in Spanish that first supplied the UNE rules, then asked for
-        the adaptation. We used 85 of the standard&rsquo;s 130 rules &mdash; the ones
-        covering orthotypography, vocabulary, sentences, text organisation and
-        document presentation &mdash; setting aside those about images and
-        paratextual elements, which a text-only model cannot act on. We deliberately
+        the adaptation. We used 85 of the standard&rsquo;s 130 rules: the ones covering orthotypography, vocabulary, sentences, text organisation and document presentation. We set aside those about images and paratextual elements, which a text-only model cannot act on. We deliberately
         used the public web interface rather than the API, because that is how most
         people actually use these tools.
       </p>
@@ -179,7 +174,7 @@
 
       <p>
         The clearest result is the bluntest. ChatGPT&rsquo;s output was the shortest
-        version of nine out of ten texts &mdash; and for the tenth it came in one
+        version of nine out of ten texts, and for the tenth it came in just one
         word longer than the human adaptation. Text 8 went from 1,143 words to 250.
         That is not simplification; it is summarisation, and the two are not the
         same thing.
@@ -200,8 +195,7 @@
       </figure>
 
       <p>
-        Losing that much content matters, because in E2R the adaptor is not only
-        allowed to add material &mdash; they are expected to. Explanations, examples
+        Losing that much content matters, because in E2R the adaptor is not only allowed to add material but expected to. Explanations, examples
         and definitions are what make a text reachable. Summarising strips exactly
         the scaffolding a reader needs.
       </p>
@@ -217,8 +211,7 @@
 
       <p>
         That combination is awkward. The model swaps hard words for easy ones, which
-        is visible and easy to check, while leaving the syntax dense &mdash; and
-        syntactic complexity is precisely what makes a sentence hard to hold in
+        is visible and easy to check, while leaving the syntax dense. And syntactic complexity is precisely what makes a sentence hard to hold in
         working memory. A text can pass a vocabulary check and still be unreadable
         for the person it was adapted for.
       </p>
@@ -239,8 +232,7 @@
 
       <p>
         Every text landed in the moderate band or below. Not one reached
-        &ldquo;substantial&rdquo;. The two evaluators agreed strongly &mdash; a
-        &kappa; of 0.85 is near-perfect &mdash; so this is not noise in the scoring.
+        &ldquo;substantial&rdquo;. The two evaluators agreed strongly (a &kappa; of 0.85 is near-perfect), so this is not noise in the scoring.
         Where they did disagree, it was most often about simplicity, which is the
         hardest of the criteria to judge from the page.
       </p>
@@ -291,7 +283,7 @@
 
       <p>
         That last reason is worth sitting with. The model&rsquo;s most obvious
-        behaviour &mdash; cutting length &mdash; is the one readers named as a
+        behaviour, cutting length, is the one readers named as a
         reason for preferring the alternative. One participant said the ChatGPT
         version was easier, but still chose the human one, because of how the ideas
         were organised and explained.
@@ -309,7 +301,7 @@
 
       <p>
         There is a methodological point underneath this too. Had we stopped at the
-        automatic metrics, ChatGPT would have looked promising &mdash; shorter texts,
+        automatic metrics, ChatGPT would have looked promising: shorter texts,
         fewer rare words, clean grammar. The checklist complicated that. The readers
         settled it. For accessibility work, evaluation that never reaches the
         intended audience is not evaluation; it is a proxy, and proxies fail in
