@@ -1044,7 +1044,20 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ==========================================================================
    CONTACT — three links, nothing else
    ========================================================================== */
+/* black section: re-point the ink tokens at cream so every rule inside flips.
+   The homepage footer follows straight after, so it shares the black ground. */
 .contact { padding-block: var(--section-y); }
+.contact,
+main:has(> .contact:last-child) + .footer {
+  background: var(--dark-900);
+  color: var(--cream);
+  --ink: var(--cream);
+  --ink-70: color-mix(in srgb, var(--cream) 70%, transparent);
+  --ink-40: color-mix(in srgb, var(--cream) 45%, transparent);
+  --ink-20: color-mix(in srgb, var(--cream) 22%, transparent);
+  --ink-10: color-mix(in srgb, var(--cream) 10%, transparent);
+  --rule: 1px solid var(--ink-20);
+}
 
 .contact__contain {
   width: calc(100% - var(--site-margin) * 2);
@@ -1092,19 +1105,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--ink-40);
   transition: transform 0.4s var(--ease), color 0.4s var(--ease);
 }
-.contact__item a:hover /* the opening row is a statement, not a link */
-.contact__item--note p {
-  padding-block: clamp(1.25rem, 0.8rem + 1.8vw, 2.25rem);
-  font-family: var(--font-serif);
-  font-size: var(--fs-h4);
-  font-weight: 400;
-  line-height: var(--lh-md);
-  letter-spacing: var(--ls-2);
-  color: var(--ink-70);
-  text-wrap: pretty;
-}
-
-.contact__arrow {
+.contact__item a:hover .contact__arrow {
   transform: translate(0.3rem, -0.3rem);
   color: var(--ink);
 }
