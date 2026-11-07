@@ -1171,6 +1171,8 @@ html.lightbox-open { overflow: hidden; }
   transition: opacity 0.3s var(--ease);
 }
 .lightbox.is-open { opacity: 1; }
+/* .lightbox sets display:flex, which would override the hidden attribute — keep it truly gone when closed */
+.lightbox[hidden] { display: none; }
 
 .lightbox__stage {
   display: grid;
