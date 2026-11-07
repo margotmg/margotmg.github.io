@@ -14,9 +14,12 @@ Static site, no build step. Open `index.html`, or serve it:
     index.html          single page; sections commented in order
     styles/main.css     design tokens at the top, then section by section
     scripts/main.js     scroll reveal, nav, capabilities sync, word fade, clock
-    assets/             real imagery + generated placeholders
-    images/             source originals (not served — convert into assets/)
-    tools/gen-placeholders.mjs
+    events.html         full events gallery
+    writing/            one page per post
+    404.html            not-found page
+    assets/             served imagery (assets/cv/ holds the CV PDF)
+    images/             source originals — kept locally, gitignored, not served
+    blog/ cv/ news/ …   redirects from the old site's URLs to the homepage
 
 ## Page order
 
@@ -33,17 +36,13 @@ Source files live in `images/`. Convert before use — browsers cannot render HE
 
     sips -s format jpeg -s formatOptions 82 -Z 1800 images/NAME.HEIC --out assets/NAME.jpg
 
-The `assets/*.svg` files are generated placeholders; regenerate with
-`node tools/gen-placeholders.mjs`. Replace them with real photography as it arrives.
-
 ## Design system
 
 Everything tunable is in `:root` in `styles/main.css` — palette, three font
 families, a fluid type scale, gutters, section rhythm, easing. Changing
 `--cream`, `--ink` and `--olive` re-skins the whole site.
 
-## Still placeholder
+## Deploy
 
-- both social URLs (`instagram.com/`, `linkedin.com/`)
-- four of five event photos, and all five venue names
-- the three writing entries (titles and bodies are stand-ins)
+Pushing to `main` runs `.github/workflows/deploy.yml`, which publishes the
+static files to the `gh-pages` branch.
