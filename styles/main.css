@@ -498,10 +498,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .about__label-wrap {
-  grid-column: span 3;
+  grid-column: 1 / span 3;
   font-size: var(--fs-main);
   line-height: var(--lh-md);
   color: var(--ink-70);
+}
+
+/* label, greeting and portrait share the first row; the greeting fills the
+   space up to the portrait and sits against its left edge, at its foot */
+.about__label-wrap,
+.about__greeting,
+.about__visual-wrap { grid-row: 1; }
+
+.about__greeting {
+  grid-column: 1 / 11;
+  justify-self: end;
+  align-self: end;
+  text-align: right;
+  font-family: var(--font-serif);
+  font-size: var(--fs-large);
+  font-weight: 400;
+  line-height: var(--lh-sm);
+  letter-spacing: var(--ls-1);
 }
 
 .about__visual-wrap {
@@ -542,11 +560,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 900px) {
-  .about__label-wrap { grid-column: span 6; }
+  .about__label-wrap { grid-column: 1 / span 6; }
   .about__visual-wrap { grid-column: 9 / span 4; }
+  .about__greeting { grid-column: 1 / 9; }
 }
 @media (max-width: 560px) {
   .about__visual-wrap { grid-column: 5 / span 8; margin-top: 2rem; }
+  .about__greeting { grid-column: 1 / 5; }
   .about__text { text-indent: 2em; }
 }
 
