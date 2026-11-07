@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="featured 02">
+  <defs>
+    <linearGradient id="g2" gradientTransform="rotate(74 .5 .5)">
+      <stop offset="0" stop-color="#c3bfb5"/>
+      <stop offset="1" stop-color="#8d8778"/>
+    </linearGradient>
+    <radialGradient id="r2" cx="56%" cy="59%" r="70%">
+      <stop offset="0" stop-color="#fcfcfc" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fcfcfc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n2" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#g2)"/>
+  <rect width="900" height="1200" fill="url(#r2)"/>
+  <rect width="900" height="1200" filter="url(#n2)" opacity=".14" style="mix-blend-mode:multiply"/>
+  <g fill="#0d0d0d" fill-opacity=".38" font-family="DM Mono, ui-monospace, monospace" font-size="17" letter-spacing="1.4">
+    <text x="50" y="1159">FEATURED 02</text>
+    <text x="850" y="1159" text-anchor="end">900×1200</text>
+  </g>
+</svg>
