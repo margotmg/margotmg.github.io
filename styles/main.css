@@ -826,6 +826,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--ink-70);
   text-wrap: pretty;
 }
+.gallery__lead a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink-40);
+  transition: border-color 0.3s var(--ease);
+}
+.gallery__lead a:hover { border-color: var(--ink); }
 
 /* 3 across, bottom-aligned so mixed ratios stagger — same logic as the home grid */
 .gallery__grid {
